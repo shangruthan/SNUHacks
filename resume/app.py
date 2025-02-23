@@ -106,6 +106,13 @@ def individual_dashboard():
 
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
+    # Fetch job roles from the database
+    conn = sqlite3.connect('scores.db')
+    c = conn.cursor()
+    c.execute('SELECT job_title FROM job_roles')
+    job_roles = c.fetchall()  # Fetch all job titles
+    conn.close()
+
     if request.method == 'POST':
         candidate_name = request.form.get('candidate_name')  # Get the candidate's name
         if 'resume' not in request.files:
@@ -133,14 +140,10 @@ def company_dashboard():
                       (candidate_name, str(scores), aggregate_score))  # Use candidate name as filename
             conn.commit()
 
-            # Fetch job roles from the database
-            c.execute('SELECT job_title FROM job_roles')
-            job_roles = c.fetchall()  # Fetch all job titles
-
             # Redirect to the results page
-            return render_template('results.html', scores=scores, aggregate_score=aggregate_score,job_roles=job_roles)
+            return render_template('results.html', scores=scores, aggregate_score=aggregate_score, job_roles=job_roles)
 
-    return render_template('company_dashboard.html')
+    return render_template('company_dashboard.html', job_roles=job_roles)  # Pass job roles to the template
 
 @app.route('/analytics', methods=['GET', 'POST'])
 def analytics():
