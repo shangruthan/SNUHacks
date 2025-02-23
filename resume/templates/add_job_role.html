@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Job Role</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Resume Evaluator</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/rankings">View Rankings</a>
+            <a href="/analytics">View Analytics</a>
+            <a href="/view_job_roles">View Job Roles</a>
+            <a href="/add_job_role">Add Job Role</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add Job Role</h2>
+        <form method="POST" action="{{ url_for('add_job_role') }}">
+            <label for="job_title">Job Title:</label><br>
+            <input type="text" id="job_title" name="job_title" required><br><br>
+            
+            <label for="job_description">Job Description:</label><br>
+            <textarea id="job_description" name="job_description" required></textarea><br><br>
+            
+            <button type="submit">Add Job Role</button>
+        </form>
+        <br>
+    </main>
+    <footer>
+        <p>&copy; 2023 Resume Evaluator</p>
+    </footer>
+</body>
+</html>

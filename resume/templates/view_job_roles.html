@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Job Roles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Resume Evaluator</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/rankings">View Rankings</a>
+            <a href="/analytics">View Analytics</a>
+            <a href="/view_job_roles">View Job Roles</a>
+            <a href="/add_job_role">Add Job Role</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Job Roles</h2>
+        <ul>
+            {% if job_roles %}
+                {% for role in job_roles %}
+                    <li>
+                        <strong>{{ role[0] }}</strong>: {{ role[1] }}
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li>No job roles available.</li>
+            {% endif %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 Resume Evaluator</p>
+    </footer>
+</body>
+</html>

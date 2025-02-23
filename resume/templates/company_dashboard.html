@@ -13,6 +13,8 @@
             <a href="/">Home</a>
             <a href="/rankings">View Rankings</a>
             <a href="/analytics">View Analytics</a>
+            <a href="/view_job_roles">View Job Roles</a>
+            <a href="/add_job_role">Add Job Role</a>
         </nav>
     </header>
     <main>
@@ -22,6 +24,13 @@
         <form action="/company_dashboard" method="post" enctype="multipart/form-data">
             <label for="candidate_name">Candidate Name:</label>
             <input type="text" name="candidate_name" required>
+            <br>
+            <label for="job_role">Select Job Role:</label>
+            <select name="job_role" id="job_role" required style="width: 100%; padding: 8px; border-radius: 4px;">
+                {% for role in job_roles %}
+                    <option value="{{ role[0] }}">{{ role[0] }}</option>
+                {% endfor %}
+            </select>
             <br>
             <input type="file" name="resume" accept=".pdf" required>
             <button type="submit">Evaluate Resume</button>

@@ -6,6 +6,7 @@ from resume_evaluation.jd import job_description
 from resume_evaluation.resume_parser import parse_resume
 from resume_evaluation.core import evaluate_resume
 import sqlite3  # New import for database
+import json  # New import for handling JSON
 
 app = Flask(__name__)
 
@@ -17,14 +18,17 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def init_db():
     conn = sqlite3.connect('scores.db')
     c = conn.cursor()
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS resume_scores (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            filename TEXT,
-            scores TEXT,  -- Store scores as a JSON string
-            aggregate_score REAL
-        )
-    ''')
+    c.execute('''CREATE TABLE IF NOT EXISTS resume_scores (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        filename TEXT,
+        scores TEXT,
+        aggregate_score REAL
+    )''')
+    c.execute('''CREATE TABLE IF NOT EXISTS job_roles (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        job_title TEXT,
+        job_description TEXT
+    )''')  # New table for job roles
     conn.commit()
     conn.close()
 
@@ -59,12 +63,16 @@ def upload_file():
                   (file.filename, str(scores), aggregate_score))
         conn.commit()
 
+        # Fetch job roles from the database
+        c.execute('SELECT job_title FROM job_roles')
+        job_roles = c.fetchall()  # Fetch all job titles
+
         # Retrieve rankings from the database
         c.execute('SELECT filename, aggregate_score FROM resume_scores ORDER BY aggregate_score DESC')
         rankings = c.fetchall()  # Fetch all rankings
         conn.close()
 
-        return render_template('results.html', scores=scores, aggregate_score=aggregate_score, rankings=rankings)
+        return render_template('results.html', scores=scores, aggregate_score=aggregate_score, rankings=rankings, job_roles=job_roles)
 
 @app.route('/rankings')
 def view_rankings():
@@ -125,8 +133,12 @@ def company_dashboard():
                       (candidate_name, str(scores), aggregate_score))  # Use candidate name as filename
             conn.commit()
 
+            # Fetch job roles from the database
+            c.execute('SELECT job_title FROM job_roles')
+            job_roles = c.fetchall()  # Fetch all job titles
+
             # Redirect to the results page
-            return render_template('results.html', scores=scores, aggregate_score=aggregate_score)
+            return render_template('results.html', scores=scores, aggregate_score=aggregate_score,job_roles=job_roles)
 
     return render_template('company_dashboard.html')
 
@@ -175,6 +187,31 @@ def analytics():
     plot_url = base64.b64encode(img.getvalue()).decode()
 
     return render_template('analytics.html', plot_url=plot_url, filenames=filenames)
+
+@app.route('/add_job_role', methods=['GET', 'POST'])
+def add_job_role():
+    if request.method == 'POST':
+        job_title = request.form.get('job_title')
+        job_description_text = request.form.get('job_description')
+        # Save the job role to the database
+        conn = sqlite3.connect('scores.db')
+        c = conn.cursor()
+        c.execute('INSERT INTO job_roles (job_title, job_description) VALUES (?, ?)',
+                  (job_title, job_description_text))
+        conn.commit()
+        conn.close()
+        return redirect(url_for('view_job_roles'))
+
+    return render_template('add_job_role.html')
+
+@app.route('/view_job_roles', methods=['GET'])
+def view_job_roles():
+    conn = sqlite3.connect('scores.db')
+    c = conn.cursor()
+    c.execute('SELECT job_title, job_description FROM job_roles')
+    job_roles = c.fetchall()  # Fetch all job roles
+    conn.close()
+    return render_template('view_job_roles.html', job_roles=job_roles)  # Pass job roles to the template
 
 # Call the database initialization function
 if __name__ == '__main__':
