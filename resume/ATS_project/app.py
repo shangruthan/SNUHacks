@@ -3,7 +3,7 @@
 from flask import Flask, request, render_template, redirect, url_for
 import os
 from jd import job_description
-from parser import parse_resume
+from resume_parser import parse_resume
 from core import evaluate_resume
 import sqlite3  # New import for database
 

@@ -2,7 +2,7 @@
 
 import os
 from jd import job_description
-from parser import parse_resume
+from resume_parser import parse_resume
 from core import evaluate_resume
 
 # Path to the resume PDF (in the same folder as main.py)
