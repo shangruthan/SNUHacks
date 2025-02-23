@@ -7,23 +7,34 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Resume Rankings</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Filename</th>
-                <th>Aggregate Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for filename, score in rankings %}
-            <tr>
-                <td>{{ filename }}</td>
-                <td>{{ score }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="/">Upload another resume</a>
+    <header>
+        <h1>Resume Evaluator</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/rankings">View Rankings</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Resume Rankings</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Aggregate Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for filename, score in rankings %}
+                <tr>
+                    <td>{{ filename }}</td>
+                    <td>{{ score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2023 Resume Evaluator</p>
+    </footer>
 </body>
 </html> 

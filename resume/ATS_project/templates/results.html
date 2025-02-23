@@ -8,17 +8,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Evaluation Results</h1>
-    <h2>Scores for each section:</h2>
-    <ul>
-        {% for section, score in scores.items() %}
-            <li>{{ section }}: {{ score }}</li>
-        {% endfor %}
-    </ul>
-    <h2>Aggregate Score: {{ aggregate_score }}</h2>
-    <a href="/">Upload another resume</a>
-    <a href="/rankings">
-        <button>View Rankings</button>
-    </a>
+    <header>
+        <h1>Resume Evaluator</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/rankings">View Rankings</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Evaluation Results</h2>
+        <h3>Scores for each section:</h3>
+        <ul>
+            {% for section, score in scores.items() %}
+                <li>{{ section }}: {{ score }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Aggregate Score: {{ aggregate_score }}</h3>
+    </main>
+    <footer>
+        <p>&copy; 2023 Resume Evaluator</p>
+    </footer>
 </body>
 </html>
