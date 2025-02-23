@@ -6,7 +6,7 @@ from parser import parse_resume
 from core import evaluate_resume
 
 # Path to the resume PDF (in the same folder as main.py)
-resume_path = "SDE_resume.pdf"
+resume_path = r"SNUHacks\resume\ATS_project\SDE_resume.pdf"
 
 # Verify the file exists
 if not os.path.exists(resume_path):

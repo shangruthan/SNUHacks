@@ -1,0 +1,20 @@
+<!-- SNUHacks/resume/ATS_project/templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Results</title>
+</head>
+<body>
+    <h1>Evaluation Results</h1>
+    <h2>Scores for each section:</h2>
+    <ul>
+        {% for section, score in scores.items() %}
+            <li>{{ section }}: {{ score }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Aggregate Score: {{ aggregate_score }}</h2>
+    <a href="/">Upload another resume</a>
+</body>
+</html>
