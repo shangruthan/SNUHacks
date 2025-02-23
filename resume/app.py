@@ -2,9 +2,9 @@
 
 from flask import Flask, request, render_template, redirect, url_for
 import os
-from jd import job_description
-from resume_parser import parse_resume
-from core import evaluate_resume
+from resume_evaluation.jd import job_description
+from resume_evaluation.resume_parser import parse_resume
+from resume_evaluation.core import evaluate_resume
 import sqlite3  # New import for database
 
 app = Flask(__name__)
