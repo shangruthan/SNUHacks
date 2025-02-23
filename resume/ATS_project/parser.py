@@ -4,7 +4,7 @@ from transformers import pipeline
 from PyPDF2 import PdfReader
 import torch
 print(torch.cuda.is_available())  # Should return True if CUDA is enabled
-print(torch.cuda.get_device_name(0))  # Should return the name of your GPU
+#print(torch.cuda.get_device_name(0))  # Should return the name of your GPU
 
 
 # Check if GPU is available

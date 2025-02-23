@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Evaluator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Upload Your Resume</h1>
@@ -12,5 +13,10 @@
         <input type="file" name="resume" accept=".pdf" required>
         <button type="submit">Upload</button>
     </form>
+    <br>
+    <!-- Add a button to view rankings -->
+    <a href="/rankings">
+        <button>View Rankings</button>
+    </a>
 </body>
 </html>
