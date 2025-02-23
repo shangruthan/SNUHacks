@@ -61,6 +61,6 @@ def evaluate_resume(job_description, resume_data):
     """
     Evaluate a resume against the job description.
     """
-    scores = calculate_scores(job_description, resume_data)
+    scores = calculate_scores(job_description, resume_data)  # This should return a nested dictionary
     aggregate_score = calculate_aggregate_score(scores)
     return scores, aggregate_score

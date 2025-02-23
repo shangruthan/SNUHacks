@@ -21,6 +21,13 @@
         <ul>
             {% for section, score in scores.items() %}
                 <li>{{ section }}: {{ score }}</li>
+                {% if score is mapping %}
+                    <ul>
+                        {% for subheading, subscore in score.items() %}
+                            <li> - {{ subheading }}: {{ subscore }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             {% endfor %}
         </ul>
         <h3>Aggregate Score: {{ aggregate_score }}</h3>

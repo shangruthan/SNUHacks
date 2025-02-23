@@ -8,26 +8,33 @@
 </head>
 <body>
     <header>
-        <h1>Resume Evaluator</h1>
+        <h1>Resume Rankings</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/rankings">View Rankings</a>
         </nav>
     </header>
     <main>
-        <h2>Resume Rankings</h2>
         <table>
             <thead>
                 <tr>
                     <th>Filename</th>
                     <th>Aggregate Score</th>
+                    <th>Scores</th>
                 </tr>
             </thead>
             <tbody>
-                {% for filename, score in rankings %}
+                {% for filename, scores, aggregate_score in rankings %}
                 <tr>
                     <td>{{ filename }}</td>
-                    <td>{{ score }}</td>
+                    <td>{{ '%.2f' | format(aggregate_score) }}</td>
+                    <td>
+                        <ul>
+                            {% for section, score in scores.items() %}
+                                <li>{{ section }}: {{ '%.2f' | format(score) }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -21,7 +21,7 @@ def init_db():
         CREATE TABLE IF NOT EXISTS resume_scores (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             filename TEXT,
-            scores TEXT,
+            scores TEXT,  -- Store scores as a JSON string
             aggregate_score REAL
         )
     ''')
@@ -70,9 +70,16 @@ def upload_file():
 def view_rankings():
     conn = sqlite3.connect('scores.db')
     c = conn.cursor()
-    c.execute('SELECT filename, aggregate_score FROM resume_scores ORDER BY aggregate_score DESC')
+    c.execute('SELECT filename, scores, aggregate_score FROM resume_scores ORDER BY aggregate_score DESC')
     rankings = c.fetchall()  # Fetch all rankings
     conn.close()
+
+    # Convert scores from JSON string to dictionary
+    for i in range(len(rankings)):
+        filename, scores_json, aggregate_score = rankings[i]
+        scores = eval(scores_json)  # Convert JSON string back to dictionary
+        rankings[i] = (filename, scores, aggregate_score)  # Update the tuple
+
     return render_template('rankings.html', rankings=rankings)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -92,7 +99,6 @@ def individual_dashboard():
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
     if request.method == 'POST':
-        # Handle the resume upload logic here
         if 'resume' not in request.files:
             return "No file part"
         file = request.files['resume']
