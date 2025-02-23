@@ -12,6 +12,7 @@
         <nav>
             <a href="/">Home</a>
             <a href="/rankings">View Rankings</a>
+            <a href="/analytics">View Analytics</a>
         </nav>
     </header>
     <main>
@@ -19,6 +20,9 @@
         <p>Welcome to the Company Dashboard! Here, you can evaluate and rank resumes submitted by candidates. Our advanced evaluation tool will help you identify the best candidates based on their qualifications and experience.</p>
         <p>Please upload a resume to get started with the evaluation process.</p>
         <form action="/company_dashboard" method="post" enctype="multipart/form-data">
+            <label for="candidate_name">Candidate Name:</label>
+            <input type="text" name="candidate_name" required>
+            <br>
             <input type="file" name="resume" accept=".pdf" required>
             <button type="submit">Evaluate Resume</button>
         </form>

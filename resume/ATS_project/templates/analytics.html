@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Resume Analytics</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/rankings">View Rankings</a>
+            <a href="/analytics">View Analytics</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Compare Candidates' Scores</h2>
+        <form method="POST">
+            <label for="candidates">Select Candidates:</label><br>
+            {% for filename in filenames %}
+                <input type="checkbox" name="candidates" value="{{ filename }}" checked> {{ filename }}<br>
+            {% endfor %}
+            <button type="submit">Compare</button>
+        </form>
+        <h3>Individual Scores Comparison</h3>
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Scores Visualization" style="max-width: 100%; height: auto;">
+    </main>
+    <footer>
+        <p>&copy; 2023 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 

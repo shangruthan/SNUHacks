@@ -99,6 +99,7 @@ def individual_dashboard():
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
     if request.method == 'POST':
+        candidate_name = request.form.get('candidate_name')  # Get the candidate's name
         if 'resume' not in request.files:
             return "No file part"
         file = request.files['resume']
@@ -117,17 +118,63 @@ def company_dashboard():
             # Evaluate the resume
             scores, aggregate_score = evaluate_resume(job_description, resume_data)
 
-            # Store the scores in the database
+            # Store the scores in the database with candidate name
             conn = sqlite3.connect('scores.db')
             c = conn.cursor()
             c.execute('INSERT INTO resume_scores (filename, scores, aggregate_score) VALUES (?, ?, ?)',
-                      (file.filename, str(scores), aggregate_score))
+                      (candidate_name, str(scores), aggregate_score))  # Use candidate name as filename
             conn.commit()
 
             # Redirect to the results page
             return render_template('results.html', scores=scores, aggregate_score=aggregate_score)
 
     return render_template('company_dashboard.html')
+
+@app.route('/analytics', methods=['GET', 'POST'])
+def analytics():
+    conn = sqlite3.connect('scores.db')
+    c = conn.cursor()
+    c.execute('SELECT filename, scores, aggregate_score FROM resume_scores')
+    rankings = c.fetchall()  # Fetch all rankings
+    conn.close()
+
+    # Prepare data for visualization
+    filenames = [r[0] for r in rankings]
+    aggregate_scores = [r[2] for r in rankings]
+    individual_scores = [eval(r[1]) for r in rankings]  # Convert JSON string back to dictionary
+
+    if request.method == 'POST':
+        selected_files = request.form.getlist('candidates')
+        selected_scores = {filename: individual_scores[i] for i, filename in enumerate(filenames) if filename in selected_files}
+    else:
+        selected_scores = {filenames[0]: individual_scores[0]}  # Default to the first candidate
+
+    # Generate visualizations (example using Matplotlib)
+    import matplotlib.pyplot as plt
+    import io
+    import base64
+
+    # Create a smaller figure for the selected candidates
+    fig, ax = plt.subplots(figsize=(8, 4))  # Adjusted size
+
+    for filename, scores in selected_scores.items():
+        sections = list(scores.keys())
+        values = list(scores.values())
+        ax.bar(sections, values, label=filename)
+
+    ax.set_title('Individual Scores Comparison')
+    ax.set_ylabel('Scores')
+    ax.set_xticklabels(sections, rotation=45, ha='right')
+    ax.legend()
+    plt.tight_layout()
+
+    # Save the plot to a BytesIO object and encode it to base64
+    img = io.BytesIO()
+    plt.savefig(img, format='png', bbox_inches='tight')  # Ensure tight layout
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode()
+
+    return render_template('analytics.html', plot_url=plot_url, filenames=filenames)
 
 # Call the database initialization function
 if __name__ == '__main__':

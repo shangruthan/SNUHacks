@@ -20,17 +20,17 @@
         <h3>Scores for each section:</h3>
         <ul>
             {% for section, score in scores.items() %}
-                <li>{{ section }}: {{ score }}</li>
+                <li>{{ section }}: {{ '%.2f' | format(score) }}</li>
                 {% if score is mapping %}
                     <ul>
                         {% for subheading, subscore in score.items() %}
-                            <li> - {{ subheading }}: {{ subscore }}</li>
+                            <li> - {{ subheading }}: {{ '%.2f' | format(subscore) }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
             {% endfor %}
         </ul>
-        <h3>Aggregate Score: {{ aggregate_score }}</h3>
+        <h3>Aggregate Score: {{ '%.2f' | format(aggregate_score) }}</h3>
     </main>
     <footer>
         <p>&copy; 2023 Resume Evaluator</p>
