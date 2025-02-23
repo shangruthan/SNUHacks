@@ -1,0 +1,28 @@
+ey Responsibilities:
+Assist in monitoring and analyzing security alerts from various security tools (SIEM, IDS/IPS, firewalls, etc.).
+Investigate potential security incidents and provide response and remediation under guidance.
+Participate in vulnerability assessments and penetration testing activities.
+Work with senior analysts to automate repetitive tasks using Python or other programming languages.
+Assist in developing and implementing security policies, procedures, and standards.
+Contribute to projects that enhance the organization’s security posture, including network security, application security, and threat intelligence.
+Support the SOC in maintaining an effective incident response workflow.
+Document findings, incidents, and responses in a structured manner.
+Conduct security research and stay up to date with the latest cybersecurity trends, tools, and techniques.
+Assist in reviewing and analyzing log data, threat intelligence feeds, and other security-related metrics.
+
+Requirements:
+Currently pursuing a degree in Computer Science, Cybersecurity, Information Technology, or a related field.
+Proficiency in programming languages such as Python and Java.
+Previous experience with security projects, including hands-on experience in vulnerability analysis, penetration testing, or threat detection.
+Familiarity with Security Operations Center (SOC) workflows and tools (e.g., SIEM, IDS/IPS, firewalls).
+Experience with automating tasks and processes using Python scripts or other automation tools.
+Basic understanding of network security concepts, including firewalls, encryption, TCP/IP, and network protocols.
+Knowledge of cybersecurity best practices, threat intelligence, and incident response methodologies.
+Excellent problem-solving and analytical skills with attention to detail.
+Strong communication skills and the ability to work in a team environment.
+Ability to document and report security issues effectively and clearly.
+
+Preferred Skills:
+Experience with security tools such as Wireshark, Burp Suite, Metasploit, or others is a plus.
+Understanding of cloud security concepts and infrastructure.
+Hands-on experience with Linux-based systems and scripting.
