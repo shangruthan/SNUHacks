@@ -2,7 +2,7 @@ from groq import Groq
 
 # Initialize Groq client
 print("Initializing Groq client...")
-client = Groq(api_key="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")  # Replace with your actual Groq API key
+client = Groq(api_key="")  # Replace with your actual Groq API key
 print("Groq client initialized.")
 
 def enhance_section(heading, content, job_description):
@@ -55,7 +55,7 @@ def main():
     # Path to the resume text file and job description
     resume_txt_path = "resume.txt"
     job_description_path = "job_description.txt"
-    enhanced_resume_path = "enhanced.txt"  # Path to save enhanced resume
+    enhanced_resume_path = "enhanced.txt"
 
     # Load the resume content
     print("Loading resume...")
@@ -90,15 +90,17 @@ def main():
         enhanced_resume[heading] = enhance_section(heading, content, job_description)
         print(f"Enhanced {heading}:\n{enhanced_resume[heading]}\n")
 
-    # Print enhanced_resume dictionary for debugging
-    print("Enhanced Resume Content:")
+    # Debug: Print enhanced_resume dictionary
+    print("Enhanced Resume Content:", enhanced_resume)
+
+    # Save the Groq response to the enhanced.txt file
+    print("Saving enhanced resume...")
     with open(enhanced_resume_path, "w") as file:
         for heading, content in enhanced_resume.items():
-             file.write(f"{heading}:\n{content}\n\n")
+            file.write(f"{heading}:\n{content}\n\n")
+    print(f"Enhanced resume saved to '{enhanced_resume_path}'.")
 
-    # Save the enhanced resume to a file (similar to how it was done with Groq)
-   
-
-# Call the main function
 if __name__ == "__main__":
+    print("Starting script...")
     main()
+    print("Script completed.")
