@@ -14,10 +14,23 @@
         <h2>Welcome to the Resume Enhancement Tool</h2>
         <p>Here you can enhance your resume with our upcoming features. Our platform will provide you with personalized feedback and suggestions to improve your resume's effectiveness in the job market.</p>
         <p>Stay tuned for more features that will help you stand out to potential employers!</p>
+        
+        <!-- New section for uploading resume and job description -->
+        <h3>Check Your ATS Score</h3>
+        <form action="/individual_results" method="post" enctype="multipart/form-data">
+            <label for="resume">Upload your Resume:</label>
+            <input type="file" name="resume" id="resume" required>
+            <br>
+            <label for="job_description">Upload Job Description:</label>
+            <input type="file" name="job_description" id="job_description" required>
+            <br>
+            <button type="submit">Check ATS Score</button>
+        </form>
+
         <a href="/">Go to Home</a>
     </main>
     <footer>
-        <p>&copy; 2023 Resume Evaluator</p>
+        <p>&copy; 2025 Resume Evaluator</p>
     </footer>
 </body>
 </html>

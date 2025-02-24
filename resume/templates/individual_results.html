@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Individual Results</h1>
+    </header>
+    <main>
+        <h2>Your ATS Score Results</h2>
+        
+        <!-- Displaying the match score -->
+        <h4>Match Score: <span id="match_score">0.7</span></h4>
+        
+        <!-- Suggestions for improvement -->
+        <h4>Suggestions for Improvement:</h4>
+        <ul id="suggestions">
+            <li>Suggestion 1: Tailor your resume to the job description.</li>
+            <li>Suggestion 2: Use keywords from the job description.</li>
+            <li>Suggestion 3: Highlight relevant experience.</li>
+        </ul>
+
+        <a href="/individual_dashboard">Go Back to Dashboard</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 

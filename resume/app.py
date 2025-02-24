@@ -104,6 +104,18 @@ def login():
 def individual_dashboard():
     return render_template('individual_dashboard.html')
 
+@app.route('/individual_results', methods=['POST'])
+def individual_results():
+    # Here you would normally process the uploaded files
+    # For now, we will just redirect to the results page with placeholder values
+    match_score = "0.7"  # Placeholder match score
+    suggestions = [
+        "Tailor your resume to the job description.",
+        "Use keywords from the job description.",
+        "Highlight relevant experience."
+    ]
+    return render_template('individual_results.html', match_score=match_score, suggestions=suggestions)
+
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
     # Fetch job roles from the database
