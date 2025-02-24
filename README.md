@@ -111,6 +111,7 @@ This tool uses **Natural Language Processing (NLP)** via the Groq API, data visu
 ## Flowchart
 
 The attached flowchart provides a detailed representation of the solution's workflow for both **candidates** and **recruiters**, highlighting key features like resume enhancement, skill gap analysis, ranking systems, portfolio generation, and analytics dashboards.
+![Uploading Flow chart.png…]()
 
 ---
 
