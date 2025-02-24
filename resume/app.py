@@ -112,7 +112,7 @@ def individual_results():
     suggestions = [
         "Tailor your resume to the job description.",
         "Use keywords from the job description.",
-        "Highlight relevant experience."
+        "Highlight relevant experiences."
     ]
     return render_template('individual_results.html', match_score=match_score, suggestions=suggestions)
 
