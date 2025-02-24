@@ -1,0 +1,57 @@
+Education:
+## Education
+Bachelor of Science in Computer Science, University of XYZ, 2020-2024
+GPA: 3.8/4.0
+Relevant Coursework: Cybersecurity, Networking Fundamentals, Programming Languages (Python, Java), Data Structures, Algorithms, and Computer Systems
+Academic Projects: Participated in various projects focusing on security vulnerability analysis, threat detection, and penetration testing using tools like Nmap, Nessus, and Metasploit
+Academic Achievements: Completed coursework in Computer Science with a strong foundation in programming languages, data structures, and software engineering, preparing me for a career in cybersecurity and compliance with industry standards and best practices.
+
+Work Experience:
+## Work Experience
+### Software Engineer Intern
+ABC Corp, Summer 2023
+- Developed and implemented REST APIs using Flask, demonstrating proficiency in Python programming and API design principles, with potential applications in security automation and threat intelligence.
+- Optimized database queries for enhanced performance, showcasing analytical and problem-solving skills, which can be applied to analyzing security-related metrics and log data.
+- Utilized Linux-based systems for development and testing, gaining hands-on experience with scripting and command-line interfaces, relevant to security testing and vulnerability analysis.
+- Collaborated with cross-functional teams to identify and resolve technical issues, honing strong communication and teamwork skills, essential for effective incident response and security collaboration.
+- Applied cybersecurity best practices to ensure secure coding and data protection, highlighting awareness of security principles and attention to detail, with potential to contribute to security policy development and implementation.
+- Contributed to the development of automated testing scripts using Python, demonstrating experience with automation tools and processes, relevant to automating repetitive security tasks and enhancing security posture.
+
+Projects:
+## Projects
+### Cybersecurity Projects
+- **Vulnerability Analysis Tool**: Developed a Python-based tool to identify and analyze potential security vulnerabilities in web applications, utilizing concepts of penetration testing and threat detection.
+- **Security Information and Event Management (SIEM) System**: Designed and implemented a SIEM system using Python and Java, integrating with various security tools such as IDS/IPS and firewalls to monitor and analyze security alerts.
+- **Network Security Automation**: Created automated scripts using Python to enhance network security, including firewall configuration and encryption, to ensure compliance with cybersecurity best practices.
+- **Threat Intelligence and Incident Response**: Conducted research on cybersecurity trends and threats, and developed a structured approach to incident response, including documentation and reporting of security incidents.
+- **Cloud Security Assessment**: Performed a security assessment of a cloud-based infrastructure, identifying potential security risks and providing recommendations for improvement, utilizing knowledge of cloud security concepts and infrastructure.
+- **Linux-Based Security Scripting**: Developed Linux-based scripts to automate security-related tasks, including vulnerability analysis and penetration testing, using tools such as Wireshark, Burp Suite, and Metasploit.
+
+Technical Skills:
+## Technical Skills
+- Programming Languages: Python, Java, JavaScript
+- Security-related Tools: SIEM, IDS/IPS, Firewalls, Wireshark, Burp Suite, Metasploit
+- Automation Tools: Python scripts, Automation frameworks
+- Frameworks: Flask, React, Node.js
+- Operating Systems: Linux-based systems
+- Networking Protocols: TCP/IP, Network protocols
+- Security Concepts: Firewalls, Encryption, Threat Intelligence, Incident Response
+- Cloud Security: Familiarity with cloud security concepts and infrastructure
+- Data Analysis: Log data analysis, Threat intelligence feeds analysis
+- Scripting: Python scripting, Linux scripting
+
+Certifications:
+## Enhanced Certifications
+- AWS Certified Solutions Architect, with a strong foundation in cloud security concepts and infrastructure
+- Google Cloud Professional Data Engineer, proficient in designing and implementing secure data pipelines and architectures
+- CompTIA Security+, with a solid understanding of cybersecurity best practices, threat intelligence, and incident response methodologies
+- Certified Information Systems Security Professional (CISSP), knowledgeable in security operations, vulnerability management, and penetration testing
+- Certified Ethical Hacker (CEH), skilled in identifying and exploiting vulnerabilities to improve organizational security posture
+
+Event Participation and Awards:
+## Event Participation and Awards
+- **Winner, Hackathon XYZ 2023**: Utilized Python programming skills to develop a threat detection tool, demonstrating proficiency in automation and cybersecurity best practices, and applied knowledge of network security concepts, including firewalls and encryption.
+- **Participant, Google Code Jam 2022**: Applied problem-solving and analytical skills to resolve complex coding challenges, showcasing ability to work under pressure and think critically, with a focus on automation and scripting using Python.
+- **Cybersecurity Research Project**: Conducted research on cloud security concepts and infrastructure, and presented findings on enhancing security posture through vulnerability assessments and penetration testing, highlighting understanding of cybersecurity trends and threat intelligence.
+- **Security Tools Training**: Completed training on security tools such as Wireshark, Burp Suite, and Metasploit, demonstrating hands-on experience with Linux-based systems and scripting, and familiarity with Security Operations Center (SOC) workflows and tools.
+
