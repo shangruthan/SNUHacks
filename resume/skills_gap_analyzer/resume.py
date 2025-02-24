@@ -1,0 +1,64 @@
+resume_information = {"""Shangruthan
+ Github
+ +91 7305777415 
+shangrutha@gmail.com 
+LinkedIn 
+Shiv Nadar University, Chennai
+ B.Tech in Computer Science with Specialization in Cyber Security
+ Work Experience
+ 2022- 2026
+ 8.02 CGPA (as of four semesters)
+ N-able Private Limited
+ Information Security Analyst
+ Jun 2024 July 2024
+ Intern
+ • Threat Detection Using Elastic Search
+ Developed automation scripts for Elastic Search to detect and mitigate SQL injection and unauthorized file access
+ attempts, improving security and reducing detection time by 30%.
+ • Sigma Rules Implementation
+  Employed Sigma rules for threat detection in Imperva Cloud and Sentinel, quarantining unauthorized downloads
+ and verifying file integrity to balance security with functionality.
+ • Threat Hunting with Sentinel One
+  Managed a scenario with 100+ agents on the Sentinel One dashboard where agents were online but not sending
+ telemetry data for 20 days. Investigated and resolved the issue to restore continuous monitoring.
+ Projects
+ Chat Crypt Encrypted client-server messaging platform.
+ Source Code
+ • Client-Server Architecture: Developed a messaging platform with a central server managing client connections for
+ real-time communication.
+ • Python Sockets: Implemented server using Python’s socket module to handle client connections and message routing.
+ DDoS Attack Detection System using Machine Learning
+ Source Code
+ • K-Means Clustering: Applied K-means to classify network traffic into normal and potentially malicious categories.
+ • Silhouette Score Evaluation: Assessed clustering effectiveness using silhouette score to detect anomalous network
+ activity.
+ HashGuard Password Manager
+ Source Code
+ • Command-Line Interface (CLI):User-friendly CLI tool with master key authentication for managing passwords and
+ profiles.
+ • SQLite3 Database:Utilizes a foreign key to connect the user database with the password database, allowing access only
+ to user database through the CLI, ensuring the passwords database remain securely stored and inaccessible to users
+ Technical Skills
+ Languages: Python, Java, C, C++
+ Frontend: HTML, CSS
+ Databases: MySQL
+ Developer Tools: VS Code, GitHub
+ Cybersecurity Tools: Wireshark, Burp Suite, Metasploit, hping3, macof, Imperva Cloud, FortiSIEM,
+ SentinelOne, Palo Alto Firewall, Fortinet, FortiGate, and Elasticsearch
+ Certifications
+ • ISC² Certified in cybersecurity (CC)
+ • Introduction to Cybersecurity by CISCO.
+ • EHPT+Ethical hacking and penetration testing by OSCALY academy
+ Accreditation
+ • Exploit Development with Assembly and C, Nmap Network Scanning and Reconnaissance, Reverse Engineering and
+ Malware Analysis on Udemy.
+ Event Participation and Awards
+ • Third place in DENHACKS Envithon conducted as part of NSS special camp:
+ Certificates
+ • Led a team effort to enhance accessibility by developing the project’s front page in three local languages.
+ • Designed clear and efficient backend code to process uploaded images and predict diseases, displaying results back
+ to the user.
+ • Participated in several Capture The Flag (CTF) competitions, including:
+ • third place in EditaCTF 2.0, an offline (CTF) organized by SNUC Coding Club.
+ • Ranked under top 10 teams in the 24-hour Password CTF conducted by the Linux Club of VIT Chennai.
+ • Ranked under top 50 in the Pragyan CTF held at NIT Trichy, a 48-hour online event"""}
