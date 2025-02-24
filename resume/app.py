@@ -7,6 +7,10 @@ from resume_evaluation.resume_parser import parse_resume
 from resume_evaluation.core import evaluate_resume
 import sqlite3  # New import for database
 import json  # New import for handling JSON
+from skills_gap_analyzer.main import missing_skills
+from skills_gap_analyzer.resume import resume_information
+from skills_gap_analyzer.job_description import jd
+import markdown  # Import the markdown library
 
 app = Flask(__name__)
 
@@ -107,14 +111,24 @@ def individual_dashboard():
 @app.route('/individual_results', methods=['POST'])
 def individual_results():
     # Here you would normally process the uploaded files
-    # For now, we will just redirect to the results page with placeholder values
-    match_score = "0.7"  # Placeholder match score
-    suggestions = [
-        "Tailor your resume to the job description.",
-        "Use keywords from the job description.",
-        "Highlight relevant experiences."
-    ]
-    return render_template('individual_results.html', match_score=match_score, suggestions=suggestions)
+    # For now, we will use the existing resume and job description for analysis
+    suggestions = missing_skills(resume_information, jd)
+    print(suggestions)  # Print the Groq response in the terminal
+    # Get suggestions from the skills gap analyzer
+    match_score = "0.7"  # Placeholder match score (you can calculate this based on the analysis if needed)
+    # Save the Groq response to the analysis.txt file
+    with open('resume/skills_gap_analyzer/analysis.txt', 'w') as file:
+        file.write(suggestions)
+   
+
+    # Read the content of analysis.txt
+    with open('resume/skills_gap_analyzer/analysis.txt', 'r') as file:
+        analysis_content = file.read()  # Read the entire content of the file
+
+    # Convert the Markdown content to HTML
+    analysis_content_html = markdown.markdown(analysis_content)
+
+    return render_template('individual_results.html', match_score=match_score, suggestions=suggestions, analysis_content=analysis_content_html)  # Pass HTML content to the template
 
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
@@ -227,6 +241,19 @@ def view_job_roles():
     job_roles = c.fetchall()  # Fetch all job roles
     conn.close()
     return render_template('view_job_roles.html', job_roles=job_roles)  # Pass job roles to the template
+
+def extract_suggestions():
+    with open('resume/skills_gap_analyzer/analysis.txt', 'r') as file:
+        content = file.read()
+        
+        # Split the content to find the "Actionable Improvements" section
+        sections = content.split("Actionable Improvements:")
+        if len(sections) > 1:
+            suggestions_section = sections[1]
+            # Split by newlines and filter out empty lines
+            suggestions = [line.strip() for line in suggestions_section.splitlines() if line.strip()]
+            return suggestions
+        return []  # Return an empty list if no suggestions found
 
 # Call the database initialization function
 if __name__ == '__main__':

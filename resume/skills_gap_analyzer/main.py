@@ -1,6 +1,9 @@
 from groq import Groq
-from resume import resume_information
-from job_description import jd
+from skills_gap_analyzer.resume import resume_information
+from skills_gap_analyzer.job_description import jd
+
+#from resume import resume_information
+#from job_description import jd
 
 # Initialize Groq client
 print("Initializing Groq client...")
@@ -48,7 +51,7 @@ def main():
     
     if suggestions:
         print("Saving suggestions and improvements to analysis.txt...")
-        with open("analysis.txt", "w") as file:
+        with open(r"resume\skills_gap_analyzer\analysis.txt", "w") as file:
             file.write("Suggestions and Improvements:\n\n")
             file.write(suggestions)
         print("Suggestions saved to analysis.txt.")
