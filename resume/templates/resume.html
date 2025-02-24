@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Resume</title>
+</head>
+<body>
+    <header>
+        <h1>{{ resume.name }}'s Resume</h1>
+    </header>
+    <main>
+        <h2>Education</h2>
+        <ul>
+            {% for edu in resume.education %}
+                <li>{{ edu }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+            {% for job in resume.work_experience %}
+                <li>{{ job }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Certificates</h2>
+        <ul>
+            {% for cert in resume.certificates %}
+                <li>{{ cert }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 
