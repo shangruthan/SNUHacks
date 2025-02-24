@@ -325,6 +325,34 @@ def extract_suggestions():
             suggestions = [line.strip() for line in suggestions_section.splitlines() if line.strip()]
             return suggestions
         return []  # Return an empty list if no suggestions found
+    
+@app.route('/generate_portfolio', methods=['GET', 'POST'])
+def generate_portfolio():
+    if request.method == 'POST':
+        if 'resume' not in request.files:
+            return "No file part"
+        file = request.files['resume']
+        if file.filename == '':
+            return "No selected file"
+        if file:
+            resume_path = os.path.join(UPLOAD_FOLDER, file.filename)
+            file.save(resume_path)
+
+            # Parse the resume to extract details
+            headings = ['name', 'contact', 'education', 'experience', 'skills', 'projects', 'certifications']
+            resume_data = parse_resume(resume_path, headings)
+
+            # Generate portfolio HTML
+            portfolio_html = render_template('portfolio_template.html', resume_data=resume_data)
+
+            # Save the portfolio HTML to a file (optional)
+            portfolio_path = os.path.join(UPLOAD_FOLDER, 'portfolio.html')
+            with open(portfolio_path, 'w') as f:
+                f.write(portfolio_html)
+
+            return portfolio_html
+
+    return render_template('upload_portfolio.html')
 
 # Call the database initialization function
 if __name__ == '__main__':

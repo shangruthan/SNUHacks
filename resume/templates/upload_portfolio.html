@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume for Portfolio</title>
+</head>
+<body>
+    <h1>Upload Your Resume to Generate a Portfolio</h1>
+    <form action="{{ url_for('generate_portfolio') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="resume" accept=".pdf,.doc,.docx">
+        <button type="submit">Generate Portfolio</button>
+    </form>
+</body>
+</html>
