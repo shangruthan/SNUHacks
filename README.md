@@ -120,7 +120,7 @@ The attached flowchart provides a detailed representation of the solution's work
 1. **Backend**: Python (Flask framework)
 2. **Frontend**: HTML, CSS (custom styles), JavaScript
 3. **Database**: SQLite
-4. **AI/NLP**: Groq API for natural language processing![Uploading Flow chart.png…]()
+4. **AI/NLP**: Groq API for natural language processing
 
 5. **Data Visualization**: Matplotlib for analytics graphs
 6. **File Handling**: Secure upload of PDF/DOCX files
