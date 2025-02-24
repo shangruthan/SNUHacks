@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Individual Results</title>
+    <title>Your Enhanced Resume</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>Individual Results</h1>
+        <h1>Your Enhanced Resume</h1>
     </header>
     <main>
-        <h2>Your Skill Gap</h2>
-        <!-- Displaying the analysis content -->
-        <h4>Analysis Content:</h4>
-        <div id="analysis_content">{{ analysis_content | safe }}</div>  <!-- Use safe to render HTML content -->
-
-        <a href="/individual_dashboard">Go Back to Dashboard</a>
+        <h2>Enhanced Resume Content</h2>
+        <pre>{{ enhanced_resume_content }}</pre>
+        <br>
+        <a href="/enhance_resume">Enhance Another Resume</a>
+        <br>
+        <a href="/">Go to Home</a>
     </main>
     <footer>
         <p>&copy; 2025 Resume Evaluator</p>

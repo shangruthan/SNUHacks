@@ -1,72 +1,75 @@
 Education:
 ## Education
-B.Tech in Computer Science with Specialization in Cyber Security, Shiv Nadar University, Chennai
-Relevant Coursework: Computer Networks, Cybersecurity, Data Structures, Algorithms, Operating Systems, and Programming Languages (Python, Java, C++)
+Pursuing B.Tech in Computer Science with Specialization in Cyber Security, Shiv Nadar University, Chennai
+Relevant Coursework: Cybersecurity, Networking Fundamentals, Operating Systems, Programming Languages (Python, Java), Data Structures, and Algorithms
 Academic Projects: Vulnerability Analysis, Penetration Testing, and Threat Detection using tools like Nmap, Nessus, and Metasploit
-Proficient in programming languages: Python, Java, and C++
-Familiarity with Linux-based systems, shell scripting, and automation tools
-Exposure to cybersecurity concepts, threat intelligence, and incident response methodologies
-Strong foundation in computer science and cybersecurity principles, with a solid understanding of network security, encryption, TCP/IP, and network protocols.
+Proficient in programming languages: Python, Java
+Familiarity with Linux-based systems, scripting, and automation tools
+Strong foundation in computer science concepts, including network security, cryptography, and software engineering
+Developing skills in security operations, threat intelligence, and incident response methodologies
+Utilizing online platforms like GitHub to showcase projects and collaborate with peers
+Enhancing knowledge of cybersecurity best practices, staying updated with the latest trends, tools, and techniques in the field.
 
 Work Experience:
-## Enhanced Work Experience
-2022-2026
-N-able Private Limited
-Information Security Analyst Intern
-Jun 2024– July 2024
-
-* **Threat Detection and Incident Response**: Utilized Elastic Search to develop automation scripts for detecting and mitigating SQL injection and unauthorized file access attempts, resulting in a 30% reduction in detection time and enhanced security posture.
-* **Security Orchestration and Automation**: Implemented Sigma rules for threat detection in Imperva Cloud and Sentinel, effectively quarantining unauthorized downloads and verifying file integrity to strike a balance between security and functionality.
-* **Threat Hunting and Incident Response**: Successfully managed a complex scenario with 100+ agents on the Sentinel One dashboard, investigating and resolving an issue where agents were online but not sending telemetry data for 20 days, ultimately restoring continuous monitoring and ensuring the integrity of the security ecosystem.
-* **Security Tools and Technologies**: Gained hands-on experience with Elastic Search, Sigma rules, Imperva Cloud, Sentinel One, and other security tools, leveraging programming languages like Python to automate repetitive tasks and enhance security workflows.
-* **Collaboration and Communication**: Worked closely with senior analysts to document findings, incidents, and responses in a structured manner, demonstrating excellent problem-solving and analytical skills with attention to detail, as well as strong communication skills and the ability to work effectively in a team environment.
+## Work Experience
+**Information Security Analyst Intern, N-able Private Limited (Jun 2024 - July 2024)**
+* Utilized security tools such as Elastic Search to detect and respond to potential security threats, leveraging programming skills in Python to automate tasks and improve incident response time by 30%.
+* Implemented Sigma rules for threat detection in Imperva Cloud and Sentinel, demonstrating expertise in Security Information and Event Management (SIEM) systems and threat intelligence feeds.
+* Conducted threat hunting activities using Sentinel One, showcasing ability to investigate and resolve complex security incidents, including agent telemetry data loss, to ensure continuous monitoring and maintain a robust security posture.
+* Developed and refined automation scripts to streamline security operations, enhancing vulnerability assessment and penetration testing capabilities, and improving overall security efficiency.
+* Collaborated with senior analysts to stay up-to-date with the latest cybersecurity trends, tools, and techniques, including cloud security concepts, Linux-based systems, and scripting, to contribute to the development of security policies, procedures, and standards.
+* Applied knowledge of cybersecurity best practices, threat intelligence, and incident response methodologies to support the Security Operations Center (SOC) in maintaining an effective incident response workflow and documenting security incidents and responses in a structured manner.
 
 Projects:
-## Enhanced Projects Section
-### Cybersecurity Projects
-* **Chat Crypt Encrypted Client-Server Messaging Platform**: Designed and developed a secure client-server messaging platform utilizing Python sockets for real-time communication, demonstrating proficiency in network security concepts, including encryption and TCP/IP protocols.
-* **DDoS Attack Detection System using Machine Learning**: Implemented a machine learning-based system for detecting DDoS attacks, leveraging K-means clustering and silhouette score evaluation to classify network traffic into normal and potentially malicious categories, showcasing expertise in threat detection and incident response.
-* **HashGuard Password Manager**: Created a secure password manager with a command-line interface, utilizing a SQLite3 database with foreign key encryption to store passwords securely, highlighting understanding of cybersecurity best practices, including password management and data protection.
+## Projects
+### Security-Related Projects
+* **Chat Crypt Encrypted Client-Server Messaging Platform**: Designed and developed a secure client-server messaging platform utilizing Python's socket module for real-time communication, demonstrating understanding of network security concepts, including encryption and TCP/IP protocols.
+* **DDoS Attack Detection System using Machine Learning**: Implemented a machine learning-based system to detect DDoS attacks, applying K-means clustering and silhouette score evaluation to classify network traffic into normal and potentially malicious categories, showcasing proficiency in threat detection and incident response methodologies.
+* **HashGuard Password Manager**: Developed a secure password manager with a command-line interface, utilizing a SQLite3 database with foreign key authentication to store passwords securely, highlighting knowledge of cybersecurity best practices, including password management and data encryption.
 
-### Security-Related Tools and Technologies
-* **Programming Languages**: Proficient in Python, with experience in developing scripts for automating tasks and processes, as well as Java, demonstrating adaptability in programming languages.
-* **Security Tools**: Familiarity with security tools, including Wireshark, Burp Suite, and Metasploit, with a strong foundation in security operations center (SOC) workflows and tools, such as SIEM, IDS/IPS, and firewalls.
-* **Cloud Security**: Basic understanding of cloud security concepts and infrastructure, with a desire to expand knowledge in this area, including hands-on experience with Linux-based systems and scripting.
+### Technical Skills Demonstrated
+* Programming languages: Python, Java
+* Security tools and technologies: Python sockets, K-means clustering, silhouette score evaluation, SQLite3 database
+* Security concepts: network security, encryption, TCP/IP, threat detection, incident response
+* Operating Systems: Linux-based systems (scripting experience)
 
-### Project Outcomes and Skills
-* **Vulnerability Analysis**: Conducted vulnerability assessments and penetration testing activities, demonstrating ability to identify and exploit vulnerabilities in systems and applications.
-* **Threat Intelligence**: Stayed up-to-date with the latest cybersecurity trends, tools, and techniques, showcasing commitment to ongoing learning and professional development in the field of cybersecurity.
-* **Collaboration and Communication**: Worked effectively in a team environment, with strong problem-solving and analytical skills, attention to detail, and excellent communication skills, demonstrating ability to document and report security issues effectively and clearly.
+### Relevance to Job Description
+* Assisted in developing and implementing security policies, procedures, and standards through secure coding practices and password management
+* Participated in vulnerability assessments and penetration testing activities through DDoS attack detection system development
+* Contributed to projects that enhance the organization's security posture, including network security, application security, and threat intelligence through Chat Crypt and HashGuard projects
+* Demonstrated ability to document and report security issues effectively and clearly through project documentation and source code availability
 
 Technical Skills:
 ## Technical Skills
-Programming Languages: Python, Java, C, C++ 
-Security Tools: Wireshark, Burp Suite, Metasploit, hping3, macof, Imperva Cloud, FortiSIEM, SentinelOne, Palo Alto Firewall, Fortinet, FortiGate, Elasticsearch
-Network Security: Firewalls, Encryption, TCP/IP, Network Protocols
-Automation Tools: Python scripts, Automation frameworks
-Cloud Security: Cloud infrastructure, Cloud security concepts
-Operating Systems: Linux-based systems, Scripting
-Development Tools: VS Code, GitHub, Agile methodologies
-Database Management: MySQL, Data analysis
-Web Development: HTML, CSS, Frontend development
-Cybersecurity Frameworks: SIEM, IDS/IPS, Threat Intelligence, Incident Response
-Compliance: Security policies, procedures, and standards, Cybersecurity best practices
+Programming Languages: Python, Java, C, C++ (utilized for automation, scripting, and vulnerability analysis)
+Frontend Development: HTML, CSS (applied to web application security assessments)
+Databases: MySQL (managed and analyzed database security and performance)
+Developer Tools: VS Code, GitHub (leveraged for version control, collaboration, and project management)
+Cybersecurity Tools: 
+- Network Security: Wireshark, hping3, macof (used for network protocol analysis and penetration testing)
+- Web Application Security: Burp Suite, Metasploit (employed for vulnerability scanning and exploitation)
+- Cloud Security: Imperva Cloud (configured and monitored cloud-based security solutions)
+- Security Information and Event Management (SIEM): FortiSIEM, Elasticsearch (analyzed and visualized security logs and metrics)
+- Endpoint Security: SentinelOne (implemented and managed endpoint detection and response)
+- Firewalls and Network Devices: Palo Alto Firewall, Fortinet, FortiGate (configured and monitored network traffic and security policies)
+Operating Systems: Proficient in Linux-based systems and scripting (used for automation, vulnerability analysis, and penetration testing)
 
 Certifications:
-## Enhanced Certifications Section
-* ISC² Certified in Cybersecurity (CC), demonstrating expertise in security and risk management, asset security, and software development security
-* Introduction to Cybersecurity by CISCO, providing a foundation in network security, threat analysis, and incident response
-* EHPT+ Ethical Hacking and Penetration Testing by OSCALY Academy, highlighting skills in vulnerability assessment, penetration testing, and security research
-* Accreditation in Exploit Development with Assembly and C, Nmap Network Scanning and Reconnaissance, and Reverse Engineering and Malware Analysis on Udemy, showcasing proficiency in advanced security topics and threat intelligence
-* Proficient in utilizing security tools such as SIEM, IDS/IPS, and firewalls, with a solid understanding of Security Operations Center (SOC) workflows and incident response methodologies
-* Skilled in programming languages such as Python, with experience in automating tasks and processes using Python scripts and other automation tools
-* Familiarity with cybersecurity best practices, threat intelligence, and incident response methodologies, with a strong foundation in network security concepts, including firewalls, encryption, TCP/IP, and network protocols
+## Enhanced Certifications and Training
+* **ISC² Certified in Cybersecurity (CC)**: Demonstrating expertise in cybersecurity principles, threat intelligence, and incident response methodologies.
+* **Introduction to Cybersecurity by CISCO**: Foundational knowledge in network security, cryptography, and security protocols.
+* **EHPT+ Ethical Hacking and Penetration Testing by OSCALY Academy**: Hands-on experience with vulnerability analysis, penetration testing, and threat detection using industry-standard tools.
+* **Udemy Accredited Courses**:
+	+ **Exploit Development with Assembly and C**: Understanding of exploit development, vulnerability analysis, and reverse engineering.
+	+ **Nmap Network Scanning and Reconnaissance**: Familiarity with network scanning, reconnaissance, and vulnerability assessment using Nmap.
+	+ **Reverse Engineering and Malware Analysis**: Knowledge of reverse engineering techniques, malware analysis, and threat intelligence.
+* **Relevant Skills and Tools**: Proficient in Python, Java, and Linux-based systems, with experience in automating tasks using Python scripts and familiarity with security tools such as Wireshark, Burp Suite, and Metasploit.
 
 Event Participation and Awards:
 ## Event Participation and Awards
-* Awarded third place in DENHACKS Envithon, a cybersecurity-focused hackathon, where I leveraged my programming skills in Python to develop a project enhancing accessibility by incorporating multilingual support, demonstrating my ability to apply cybersecurity principles to real-world problems.
-* Led a team in designing and developing a predictive disease diagnosis system, utilizing my understanding of network security concepts, including data encryption and secure data transmission, to ensure the confidentiality and integrity of user data.
-* Participated in multiple Capture The Flag (CTF) competitions, including EditaCTF 2.0, Password CTF, and Pragyan CTF, where I applied my knowledge of threat intelligence, vulnerability analysis, and penetration testing to solve security-related challenges, demonstrating my proficiency in cybersecurity best practices and incident response methodologies.
-* Utilized my problem-solving and analytical skills to rank among the top teams in CTF competitions, showcasing my ability to work effectively in a team environment and communicate complex security concepts clearly and concisely.
-* Developed and demonstrated expertise in security tools and technologies, including Linux-based systems, scripting, and automation, highlighting my potential to contribute to security projects and enhance the organization's security posture.
+* Secured third place in DENHACKS Envithon, a cybersecurity-focused hackathon, demonstrating proficiency in rapid threat detection and response, as well as collaborative problem-solving skills.
+* Led a team in developing a multilingual front page, enhancing accessibility and showcasing ability to work in a team environment, while designing and implementing efficient backend code to process and analyze data, utilizing skills in programming languages such as Python.
+* Participated in multiple Capture The Flag (CTF) competitions, including EditaCTF 2.0, Password CTF, and Pragyan CTF, honing skills in vulnerability analysis, penetration testing, and threat intelligence, with a strong understanding of cybersecurity best practices and incident response methodologies.
+* Utilized knowledge of network security concepts, including firewalls, encryption, and TCP/IP, to analyze and respond to security challenges in CTF competitions, while demonstrating excellent problem-solving and analytical skills with attention to detail.
+* Developed and demonstrated expertise in automating tasks and processes using Python scripts, while working with security tools and technologies, such as those used in Security Operations Center (SOC) workflows, including SIEM, IDS/IPS, and firewalls.
 

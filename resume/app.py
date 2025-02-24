@@ -10,6 +10,7 @@ import json  # New import for handling JSON
 from skills_gap_analyzer.main import missing_skills
 from skills_gap_analyzer.resume import resume_information
 from skills_gap_analyzer.job_description import jd
+from resume_enhancer.main import enhance_section
 import markdown  # Import the markdown library
 
 app = Flask(__name__)
@@ -77,6 +78,76 @@ def upload_file():
         conn.close()
 
         return render_template('results.html', scores=scores, aggregate_score=aggregate_score, rankings=rankings, job_roles=job_roles)
+
+@app.route('/enhance_resume', methods=['GET', 'POST'])
+def enhance_resume():
+    if request.method == 'POST':
+        # Load the job description
+        job_description_path = "resume/resume_enhancer/job_description.txt"
+        with open(job_description_path, "r", encoding='utf-8') as file:
+            job_description = file.read()
+
+        # Load the hardcoded resume content
+        resume_txt_path = "resume/resume_enhancer/resume.txt"  # Path to your hardcoded resume
+        print("Loading resume...")
+        with open(resume_txt_path, "r", encoding='utf-8') as file:
+            resume_content = file.read()
+        print("Resume loaded successfully.")
+
+        # Define predefined headings
+        headings = [
+            "Education",
+            "Work Experience",
+            "Projects",
+            "Technical Skills",
+            "Certifications",
+            "Event Participation and Awards"
+        ]
+
+        # Split the resume content into sections based on headings
+        parsed_resume = {}
+        current_heading = None
+        for line in resume_content.splitlines():
+            line = line.strip()  # Remove leading/trailing whitespace
+            if line in headings:
+                current_heading = line
+                if current_heading not in parsed_resume:  # Prevent duplicate headings
+                    parsed_resume[current_heading] = []
+            elif current_heading:
+                parsed_resume[current_heading].append(line)
+
+        # Convert each section to a single string (paragraph)
+        for heading, content in parsed_resume.items():
+            parsed_resume[heading] = "\n".join(content)
+
+        # Enhance each section
+        enhanced_resume = {}
+        for heading, content in parsed_resume.items():
+            print(f"Processing section: {heading}")
+            enhanced_content = enhance_section(heading, content, job_description)
+            if heading not in enhanced_resume:  # Prevent saving the same heading twice
+                enhanced_resume[heading] = enhanced_content
+            print(f"Enhanced {heading}:\n{enhanced_resume[heading]}\n")
+
+        # Save the enhanced resume to a file
+        enhanced_resume_path = "enhanced_resume.txt"  # Path to save enhanced resume
+        with open(enhanced_resume_path, "w", encoding='utf-8') as file:
+            for content in enhanced_resume.values():
+                file.write(f"{content}\n\n")  # Write only the enhanced content
+
+        # Redirect to the enhanced results page
+        return redirect(url_for('enhanced_results'))
+
+    return render_template('enhance_resume.html')
+
+@app.route('/enhanced_results', methods=['GET'])
+def enhanced_results():
+    # Read the enhanced resume content from the file
+    enhanced_resume_path = "enhanced_resume.txt"  # Path to the enhanced resume file
+    with open(enhanced_resume_path, "r", encoding='utf-8') as file:
+        enhanced_resume_content = file.read()
+    enhanced_resume_content = markdown.markdown(enhanced_resume_content)
+    return render_template('enhanced_results.html', enhanced_resume_content=enhanced_resume_content)
 
 @app.route('/rankings')
 def view_rankings():

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhance Your Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Enhance Your Resume</h1>
+    </header>
+    <main>
+        <h2>Upload your Resume for Enhancement</h2>
+        <form action="/enhance_resume" method="post" enctype="multipart/form-data">
+            <label for="resume">Upload your Resume (PDF or TXT):</label>
+            <input type="file" name="resume" id="resume" accept=".pdf,.txt" required>
+            <br>
+            <button type="submit">Enhance Resume</button>
+        </form>
+
+        {% if enhanced_resume %}
+            <h2>Enhanced Resume Content</h2>
+            <div>
+                {% for heading, content in enhanced_resume.items() %}
+                    <h3>{{ heading }}</h3>
+                    <div>{{ content | safe }}</div>  <!-- Use 'safe' to render HTML -->
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <a href="/">Go to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 

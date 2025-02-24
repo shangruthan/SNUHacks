@@ -16,7 +16,7 @@
         <p>Stay tuned for more features that will help you stand out to potential employers!</p>
         
         <!-- New section for uploading resume and job description -->
-        <h3>Check Your ATS Score</h3>
+        <h3>Check Your Skill Gap</h3>
         <form action="/individual_results" method="post" enctype="multipart/form-data">
             <label for="resume">Upload your Resume:</label>
             <input type="file" name="resume" id="resume" required>
@@ -24,7 +24,7 @@
             <label for="job_description">Upload Job Description:</label>
             <input type="file" name="job_description" id="job_description" required>
             <br>
-            <button type="submit">Check ATS Score</button>
+            <button type="submit">Check Analysis</button>
         </form>
 
         <h3>Generate Resume from LinkedIn Profile</h3>
@@ -33,6 +33,12 @@
             <input type="url" name="linkedin_url" id="linkedin_url" required>
             <br>
             <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- New section for enhancing resume -->
+        <h3>Enhance Your Resume</h3>
+        <form action="/enhance_resume" method="get">
+            <button type="submit">Go to Enhance Resume</button>
         </form>
 
         <a href="/">Go to Home</a>

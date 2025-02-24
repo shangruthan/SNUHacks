@@ -2,7 +2,7 @@ from groq import Groq
 
 # Initialize Groq client
 print("Initializing Groq client...")
-client = Groq(api_key="")  # Replace with your actual Groq API key
+client = Groq(api_key="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")  # Replace with your actual Groq API key
 print("Groq client initialized.")
 
 def enhance_section(heading, content, job_description):
@@ -13,7 +13,7 @@ def enhance_section(heading, content, job_description):
     prompt = f"""
     Enhance the following resume section to make it ATS-friendly and highly relevant to the job description.
     Focus on incorporating keywords and requirements from the job description while maintaining clarity and professionalism.
-
+    Provide the content in proper markdown format.
     Job Description:
     {job_description}
 
@@ -53,9 +53,9 @@ def main():
     ]
 
     # Path to the resume text file and job description
-    resume_txt_path = "resume.txt"
-    job_description_path = "job_description.txt"
-    enhanced_resume_path = "enhanced.txt"
+    resume_txt_path = r"resume\resume_enhancer\resume.txt"
+    job_description_path = r"resume\resume_enhancer\job_description.txt"
+    enhanced_resume_path = r"resume\resume_enhancer\enhanced.txt"
 
     # Load the resume content
     print("Loading resume...")
@@ -88,7 +88,7 @@ def main():
     for heading, content in parsed_resume.items():
         print(f"Processing section: {heading}")
         enhanced_resume[heading] = enhance_section(heading, content, job_description)
-        print(f"Enhanced {heading}:\n{enhanced_resume[heading]}\n")
+        print(f"{enhanced_resume[heading]}\n")
 
     # Debug: Print enhanced_resume dictionary
     print("Enhanced Resume Content:", enhanced_resume)
@@ -97,7 +97,7 @@ def main():
     print("Saving enhanced resume...")
     with open(enhanced_resume_path, "w") as file:
         for heading, content in enhanced_resume.items():
-            file.write(f"{heading}:\n{content}\n\n")
+            file.write(f"{content}\n\n")
     print(f"Enhanced resume saved to '{enhanced_resume_path}'.")
 
 if __name__ == "__main__":
