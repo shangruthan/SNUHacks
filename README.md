@@ -111,7 +111,7 @@ This tool uses **Natural Language Processing (NLP)** via the Groq API, data visu
 ## Flowchart
 
 The attached flowchart provides a detailed representation of the solution's workflow for both **candidates** and **recruiters**, highlighting key features like resume enhancement, skill gap analysis, ranking systems, portfolio generation, and analytics dashboards.
-![Uploading Flow chart.png…]()
+![Flow chart](https://github.com/user-attachments/assets/0f01f2ab-d8a0-4346-9df2-965962458206)
 
 ---
 
@@ -120,7 +120,8 @@ The attached flowchart provides a detailed representation of the solution's work
 1. **Backend**: Python (Flask framework)
 2. **Frontend**: HTML, CSS (custom styles), JavaScript
 3. **Database**: SQLite
-4. **AI/NLP**: Groq API for natural language processing
+4. **AI/NLP**: Groq API for natural language processing![Uploading Flow chart.png…]()
+
 5. **Data Visualization**: Matplotlib for analytics graphs
 6. **File Handling**: Secure upload of PDF/DOCX files
 
