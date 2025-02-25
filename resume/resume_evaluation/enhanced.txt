@@ -1,0 +1,92 @@
+### Education
+* **Bachelor's Degree in Computer Science**, Shiv Nadar University, Chennai, GPA: 8.0/10
+* **Relevant Coursework**: Network Security, Cryptography, Cybersecurity, Cloud Security, System Security, Cyber Forensics, Web Technologies
+* **Strong Academic Background**: Minimum GPA of 3.0 (or equivalent), with a focus on cybersecurity and related fields
+
+### Experience
+* **Cybersecurity Enthusiast with Hands-on Experience**: Proven expertise in identifying critical vulnerabilities, developing security tools, and contributing to cybersecurity research
+* **Offensive Security Engineer**, CyberXtron (January 2024 - August 2024)
+	+ Conducted penetration tests and identified critical vulnerabilities (e.g., XSS, SQLi, IDOR)
+	+ Developed centralized log management pipelines, optimizing ingestion and visualization workflows
+	+ Utilized Elasticsearch and Logstash to create structured, scalable data processing pipelines
+* **Technical Cybersecurity Content Writer**, Bridge (November 2024 - December 2024)
+	+ Simplified complex concepts for diverse audiences, enhancing content accessibility and engagement
+* **Security Vulnerability Monitoring System** (September 2024 - October 2024)
+	+ Developed a security vulnerability monitoring system using Python, ELK Stack, and Docker
+* **SecureAuth** (May 2024)
+	+ Ensured secure session management and implemented robust authentication mechanisms
+
+### Skills
+* **Technical Skills**:
+	+ Proficiency in network protocols (TCP/IP, DNS, HTTP/HTTPS) and firewall configurations
+	+ Knowledge of encryption technologies, authentication mechanisms, and access control policies
+	+ Experience with scripting languages (Python, Bash, PowerShell) for automation
+	+ Familiarity with endpoint protection tools, IDS/IPS systems, and antivirus solutions
+* **Analytical Skills**:
+	+ Ability to analyze security logs, detect anomalies, and respond to security incidents promptly
+	+ Strong problem-solving skills to mitigate risks and resolve security breaches
+* **Communication Skills**:
+	+ Excellent written and verbal communication skills to document findings and present reports to stakeholders
+	+ Ability to collaborate effectively with IT teams, management, and external vendors
+* **Soft Skills**:
+	+ Attention to detail and a proactive approach to identifying potential threats
+	+ Ability to work under pressure and manage multiple priorities in a fast-paced environment
+
+### Projects
+* **ShadowSpot**: Developed an EASM tool to detect exposure in external assets and monitor vulnerabilities
+* **DarkFlash**: Engineered a dark web monitoring system, utilizing advanced scraping techniques and Elasticsearch pipelines
+* **Security Vulnerability Monitoring System**: Developed a security vulnerability monitoring system using Python, ELK Stack, and Docker
+* **SecureAuth**: Developed a secure authentication system using Python, MySQL, and cryptography
+
+### Certifications
+* **CompTIA Security+**: Pending
+* **Certified Ethical Hacker (CEH)**: Pending
+* **Certified Information Systems Security Professional (CISSP)**: Pending
+
+### Achievements and Bug Bounty
+* **Discovered and reported 7 critical vulnerabilities** in PHP Gurukul, leading to 1 CVE and securing 5,000+ users
+* **Achieved top placements in CTF competitions**: 4th in Edita CTF, 6th in VIT CTF
+* **Completed 30+ TryHackMe rooms** and engaged in PortSwigger Labs, OWASP Juice Shop, and Natas
+
+### Education
+* Bachelor's degree in Cybersecurity, with a strong academic background and a minimum GPA of 3.0, and relevant coursework in network security, cryptography, ethical hacking, and risk management.
+* Currently pursuing a Master's degree in Cybersecurity to further enhance knowledge and skills in the field.
+
+### Experience
+* 3+ years of professional experience in cybersecurity, with hands-on experience in threat detection, vulnerability assessments, and incident response, utilizing SIEM tools such as Splunk and QRadar to manage security operations.
+* Proven experience in cloud security, with expertise in securing cloud-based environments on AWS, Azure, and GCP, and familiarity with compliance frameworks such as GDPR, HIPAA, PCI-DSS, and ISO 27001.
+
+### Skills
+#### Technical Skills
+* Proficient in network protocols (TCP/IP, DNS, HTTP/HTTPS) and firewall configurations, with knowledge of encryption technologies, authentication mechanisms, and access control policies.
+* Experienced in scripting languages such as Python, Bash, and PowerShell for automation, with familiarity with endpoint protection tools, IDS/IPS systems, and antivirus solutions.
+#### Analytical Skills
+* Skilled in analyzing security logs, detecting anomalies, and responding to security incidents promptly, with strong problem-solving skills to mitigate risks and resolve security breaches.
+#### Communication Skills
+* Excellent written and verbal communication skills to document findings and present reports to stakeholders, with ability to collaborate effectively with IT teams, management, and external vendors.
+#### Soft Skills
+* Detail-oriented and proactive approach to identifying potential threats, with ability to work under pressure and manage multiple priorities in a fast-paced environment.
+
+### Projects
+* **Vulnerability Assessment and Penetration Testing**: Conducted comprehensive vulnerability assessments and penetration tests on networks and applications to identify potential security threats and weaknesses.
+* **Security Monitoring and Incident Response**: Implemented and managed security monitoring tools, including SIEM and SOAR, to detect and respond to threats, and developed and executed incident response plans to mitigate the impact of cyberattacks.
+* **Secure Network Architecture**: Designed and deployed secure network architectures, ensuring compliance with industry standards and best practices.
+* **Automation and Efficiency**: Automated security tasks using Python scripts and other tools to improve efficiency and reduce manual effort.
+* **Cybersecurity Research and Open-Source Projects**: Contributed to cybersecurity research and open-source security projects, staying up-to-date with the latest threats and technologies.
+
+### Certifications
+* **CompTIA Security+**: Currently preparing for the CompTIA Security+ certification to demonstrate expertise in network security, vulnerabilities, and risk management.
+* **Certified Ethical Hacker (CEH)**: Pursuing the CEH certification to enhance skills in ethical hacking and penetration testing.
+* **AWS Certified Security – Specialty**: Interested in pursuing the AWS Certified Security – Specialty certification to demonstrate expertise in cloud security and AWS security services.
+* **INE Security - EJPT**: Currently in progress, expected to complete soon.
+* **TryHackMe - Advent of Cyber 2024**: Completed the Advent of Cyber 2024 challenge, demonstrating hands-on experience in cybersecurity and penetration testing.
+
+### Certifications
+* **Google Cybersecurity Professional Certificate**, Feb 2024 - May 2024
+* **CompTIA Security+**, _in progress_
+* **Certified Information Systems Security Professional (CISSP)**, _planned_
+* **Certified Ethical Hacker (CEH)**, _planned_
+* **AWS Certified Security – Specialty**, _desired_
+* **Certified Cloud Security Professional (CCSP)**, _desired_
+* **Offensive Security Certified Professional (OSCP)**, _desired_
+
