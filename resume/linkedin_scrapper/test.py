@@ -19,7 +19,7 @@ try:
     actions.login(driver, "thisisnk3794@gmail.com", "nareshkumar")  # Enter your LinkedIn credentials
 
     # Scrape a LinkedIn profile
-    profile_url = "https://www.linkedin.com/in/shangruthan"  # Example profile URL
+    profile_url = "https://www.linkedin.com/in/rejen-thompson-765271258"  # Example profile URL
     person = Person(profile_url, driver=driver, scrape=True)
 
     # Extract profile data

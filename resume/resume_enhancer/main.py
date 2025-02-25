@@ -2,7 +2,7 @@ from groq import Groq
 
 # Initialize Groq client
 print("Initializing Groq client...")
-client = Groq(api_key="")  # Replace with your actual Groq API key
+client = Groq(api_key="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")  # Replace with your actual Groq API key
 print("Groq client initialized.")
 
 def enhance_section(heading, content, job_description):
