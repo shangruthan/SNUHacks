@@ -7,7 +7,7 @@ from skills_gap_analyzer.job_description import jd
 
 # Initialize Groq client
 print("Initializing Groq client...")
-client = Groq(api_key="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")  # Replace with your actual Groq API key
+client = Groq(api_key="")  # Replace with your actual Groq API key
 print("Groq client initialized.")
 
 def missing_skills(resume_information, jd):

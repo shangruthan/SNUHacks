@@ -5,36 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .feature-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+        }
+        .feature-card {
+            width: 250px; /* Fixed width for square shape */
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between content and button */
+        }
+        .feature-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            margin-bottom: 15px;
+            flex-grow: 1; /* Allow paragraph to grow and take available space */
+        }
+        .feature-card button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .feature-card button:hover {
+            background-color: #1e40af;
+        }
+        .margin-top {
+        margin-top: 10px; /* Customize this value for desired gap */
+    }
+        </style>
 </head>
 <body>
     <header>
         <h1>Company Dashboard</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/rankings">View Rankings</a>
-            <a href="/analytics">View Analytics</a>
-            <a href="/view_job_roles">View Job Roles</a>
-            <a href="/add_job_role">Add Job Role</a>
-        </nav>
     </header>
     <main>
-        <h2>Resume Evaluation Tool</h2>
-        <p>Welcome to the Company Dashboard! Here, you can evaluate and rank resumes submitted by candidates. Our advanced evaluation tool will help you identify the best candidates based on their qualifications and experience.</p>
-        <p>Please upload a resume to get started with the evaluation process.</p>
-        <form action="/company_dashboard" method="post" enctype="multipart/form-data">
-            <label for="candidate_name">Candidate Name:</label>
-            <input type="text" name="candidate_name" required>
-            <br>
-            <label for="job_role">Select Job Role:</label>
-            <select name="job_role" id="job_role" required style="width: 100%; padding: 8px; border-radius: 4px;">
-                {% for role in job_roles %}
-                    <option value="{{ role[0] }}">{{ role[0] }}</option>
-                {% endfor %}
-            </select>
-            <br>
-            <input type="file" name="resume" accept=".pdf" required>
-            <button type="submit">Evaluate Resume</button>
-        </form>
+        <h2>Welcome to the Company Dashboard</h2>
+        <p>Here, you can evaluate and rank resumes submitted by candidates. Our advanced evaluation tool will help you identify the best candidates based on their qualifications and experience.</p>
+        <div class="feature-container">
+        <div class="feature-card">
+            <h3>Resume Evaluation Tool</h3>
+            <p>Upload a candidate's resume to evaluate their qualifications and experience.</p>
+            <button onclick="location.href='/resume_evaluation'">Go to Resume Evaluation</button>
+        </div>
+            <div class="feature-card">
+                <h3>View Rankings</h3>
+                <p>Check the rankings of evaluated resumes to identify top candidates.</p>
+                <button onclick="location.href='/rankings'">View Rankings</button>
+            </div>
+            <div class="feature-card">
+                <h3>View Analytics</h3>
+                <p>Analyze hiring trends and candidate statistics to improve your recruitment process.</p>
+                <button onclick="location.href='/analytics'">View Analytics</button>
+            </div>
+            <div class="feature-card">
+                <h3>Manage Job Roles</h3>
+                <p>Add or view job roles to streamline your hiring process.</p>
+                <button onclick="location.href='/view_job_roles'">View Job Roles</button>
+                
+                <button class ="margin-top"onclick="location.href='/add_job_role'">Add Job Role</button>
+            </div>
+        </div>
+    </div>
     </main>
     <footer>
         <p>&copy; 2025 Resume Evaluator</p>
