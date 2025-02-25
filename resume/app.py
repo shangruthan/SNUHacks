@@ -366,6 +366,33 @@ def job_listings():
 
     return render_template('job_listings.html', jobs=jobs)
 
+@app.route('/skill_gap_analysis')
+def skill_gap_analysis():
+    return render_template('skill_gap_analysis.html')
+
+@app.route('/scrape_linkedin')
+def scrape_linkedin():
+    return render_template('scrape_linkedin.html')
+
+@app.route('/generate_resume', methods=['POST'])
+def generate_resume():
+    linkedin_url = request.form['linkedin_url']
+    
+    # Here you would call your scraping function to extract data from the LinkedIn profile
+    # For example:
+    # resume_data = scrape_linkedin_profile(linkedin_url)
+    
+    # After scraping, you can render a resume template with the extracted data
+    # return render_template('resume.html', resume=resume_data)
+
+    # Placeholder response for now
+    return f"Scraping LinkedIn profile at: {linkedin_url}"
+
+@app.route('/resume_evaluation')
+def resume_evaluation():
+    # Assuming job_roles is a list of job roles you want to display in the dropdown
+    return render_template('resume_evaluation.html',)
+
 # Call the database initialization function
 if __name__ == '__main__':
     init_db()  # Initialize the database

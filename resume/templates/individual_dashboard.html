@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .feature-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+        }
+        .feature-card {
+            width: 250px; /* Fixed width for square shape */
+            height: 300px; /* Fixed height for square shape */
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between content and button */
+        }
+        .feature-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            margin-bottom: 15px;
+            flex-grow: 1; /* Allow paragraph to grow and take available space */
+        }
+        .feature-card button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .feature-card button:hover {
+            background-color: #1e40af;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,49 +57,33 @@
         <p>Here you can enhance your resume with our upcoming features. Our platform will provide you with personalized feedback and suggestions to improve your resume's effectiveness in the job market.</p>
         <p>Stay tuned for more features that will help you stand out to potential employers!</p>
         
-        <!-- New section for uploading resume and job description -->
-        <h3>Check Your Skill Gap</h3>
-        <form action="/individual_results" method="post" enctype="multipart/form-data">
-            <label for="resume">Upload your Resume:</label>
-            <input type="file" name="resume" id="resume" class="full-width" required>
-            <br>
-            <label for="job_description">Upload Job Description:</label>
-            <input type="file" name="job_description" id="job_description" class="full-width" required>
-            <br>
-            <button type="submit">Check Analysis</button>
-        </form>
-
-        <h3>Generate Resume from LinkedIn Profile</h3>
-        <form action="/scrape_linkedin" method="post">
-            <label for="linkedin_url">Enter your LinkedIn Profile URL:</label>
-            <input type="url" name="linkedin_url" id="linkedin_url" class="full-width" required>
-            <br>
-            <button type="submit">Generate Resume</button>
-        </form>
-
-        <!-- New section for enhancing resume -->
-        <h3>Enhance Your Resume</h3>
-        <form action="/enhance_resume" method="get">
-            <button type="submit">Go to Enhance Resume</button>
-        </form>
-
-        <!-- New section for generating portfolio from resume -->
-        <h3>Generate Portfolio from Resume</h3>
-        <form action="/generate_portfolio" method="post" enctype="multipart/form-data">
-            <label for="resume_portfolio">Upload your Resume:</label>
-            <input type="file" name="resume" id="resume_portfolio" class="full-width" required>
-            <br>
-            <button type="submit">Generate Portfolio</button>
-        </form>
-
-        <!-- Form enclosed button to access job listings -->
-        <h3>Job Listings</h3>
-        <form action="/job_listings" method="get">
-            <button type="submit">View Job Listings</button>
-        </form>
-
-        <!-- Link to go back to the home page -->
-        <a href="/">Go to Home</a>
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Check Your Skill Gap</h3>
+                <p>Upload your resume and job description to identify missing skills and receive actionable suggestions.</p>
+                <button onclick="location.href='/skill_gap_analysis'">Check Analysis</button>
+            </div>
+            <div class="feature-card">
+                <h3>Generate Resume from LinkedIn Profile</h3>
+                <p>Extract data from your LinkedIn profile to create a structured resume.</p>
+                <button onclick="location.href='/scrape_linkedin'">Generate Resume</button>
+            </div>
+            <div class="feature-card">
+                <h3>Enhance Your Resume</h3>
+                <p>Upload your resume to receive ATS-compliant suggestions for improvement.</p>
+                <button onclick="location.href='/enhance_resume'">Go to Enhance Resume</button>
+            </div>
+            <div class="feature-card">
+                <h3>Generate Portfolio from Resume</h3>
+                <p>Create a simple portfolio website showcasing your skills and projects from your resume.</p>
+                <button onclick="location.href='/generate_portfolio'">Generate Portfolio</button>
+            </div>
+            <div class="feature-card">
+                <h3>Job Listings</h3>
+                <p>View available job opportunities that match your skills and qualifications.</p>
+                <button onclick="location.href='/job_listings'">View Job Listings</button>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Resume Evaluator</p>

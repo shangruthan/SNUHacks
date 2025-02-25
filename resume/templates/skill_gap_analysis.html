@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Gap Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Skill Gap Analysis</h1>
+    </header>
+    <main>
+        <h2>Analyze Your Skills</h2>
+        <p>Upload your resume and job description to identify missing skills and receive actionable suggestions.</p>
+        
+        <form action="/individual_results" method="post" enctype="multipart/form-data">
+            <label for="resume">Upload your Resume:</label>
+            <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
+            <br>
+            <label for="job_description">Upload Job Description:</label>
+            <input type="file" name="job_description" id="job_description" accept=".pdf,.doc,.docx" required>
+            <br>
+            <button type="submit">Check Analysis</button>
+        </form>
+        
+        <a href="/individual_dashboard">Go Back to Dashboard</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 

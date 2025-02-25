@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Resume Evaluation Tool</h1>
+    </header>
+    <main>
+        <h2>Upload Candidate's Resume</h2>
+        <form action="/company_dashboard" method="post" enctype="multipart/form-data">
+            <label for="candidate_name">Candidate Name:</label>
+            <input type="text" name="candidate_name" required>
+            <br>
+            <label for="job_role">Select Job Role:</label>
+            <select name="job_role" id="job_role" required style="width: 100%; padding: 8px; border-radius: 4px;">
+                {% for role in job_roles %}
+                    <option value="{{ role[0] }}">{{ role[0] }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" name="resume" accept=".pdf" required>
+            <button type="submit">Evaluate Resume</button>
+        </form>
+        <a href="/company_dashboard">Go Back to Dashboard</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 
