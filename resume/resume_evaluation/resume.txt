@@ -1,0 +1,65 @@
+Education:
+♂phone+91 7418242633 /envel⌢perejen22110019@snuchennai.edu.in /linkedinrejen-thompson /githubGitHub /gl⌢beBlog
+Education
+Shiv Nadar University, Chennai GPA: 8.0/10
+Thamarai International School, Thanjavur
+
+
+Experience:
+Rejen Thompson
+Professional Summary
+Cybersecurity enthusiast with hands-on experience in offensive security, vulnerability assessment, and penetration testing.
+Proven expertise in identifying critical vulnerabilities (e.g., XSS, SQLi, IDOR), developing security tools, and contributing
+Experience
+•Conducted penetration tests and identified 7 critical vulnerabilities (1 CVE) in PHP Gurukul, including XSS, SQL
+Injection, and IDOR , protecting 5,000+ users.
+•Enhanced Elasticsearch workflows for seamless data ingestion from external sources, improving log management.
+Bridge - Technical Cybersecurity Content Writer November 2024 - December 2024
+•Simplified complex concepts for diverse audiences, enhancing content accessibility and engagement.
+Security Vulnerability Monitoring System [Python, ELK Stack, Docker] Sep - Oct 2024
+SecureAuth [Python, MySQL, Cryptography] May 2024
+•Ensured secure session management and implemented robust authentication mechanisms.
+•Network and Cloud Tools: AWS, Wireshark, Bettercap, Aircrack-Ng
+•TCM Security - Practical Ethical Hacking, OSINT, Bug Bounty Nov - Dec 2024
+Achievements and Bug Bounty
+transaction manipulation. Findings led to securing 1,000+ monthly transactions.
+•Discovered and reported 7 critical vulnerabilities in PHP Gurukul , leading to 1 CVE and securing 5,000+ users.
+•Achieved top placements in CTF competitions: 4th in Edita CTF, 6th in VIT CTF.
+•Completed 30+ TryHackMe rooms and engaged in PortSwigger Labs, OWASP Juice Shop, and Natas.
+•Organized Freshers’ Day 2024 and led the core team for a major college event.
+
+
+Skills:
+Cybersecurity Enthusiast — VAPT Specialist
+to CVE databases. Aiming to leverage technical skills in VAPT roles to enhance organizational security postures.
+Relevant Courses: OS, Computer Networks, Cybersecurity, Cryptography, Network Security, Cloud Security, System
+Security, Cyber Forensics, Web Technologies
+CyberXtron - Offensive Security Engineer January 2024 - August 2024
+•Authored technical content on cybersecurity topics , including vulnerability assessments and hands-on lab scenarios.
+•Developed centralized log management pipelines , optimizing ingestion and visualization workflows.
+•Leveraged Elasticsearch and Logstash to create structured, scalable data processing pipelines.
+•Utilized prepared statements to prevent SQL injection and built modular components for user management.
+Skills
+•Frameworks and Methodologies: MITRE ATT&CK, PASTA, OWASP TOP 10
+•Penetration Testing Tools: Burp Suite, Metasploit, Nessus, Nmap, ZAP
+•Log Analysis Tools: Kibana, Elasticsearch, Logstash
+•Identified and exploited insecure API endpoints in a travel website’s payment gateway, leading to unauthorized
+
+
+Projects:
+•Developed ShadowSpot , an EASM tool to detect exposure in external assets and monitor vulnerabilities.
+•Engineered DarkFlash , a dark web monitoring system, utilizing advanced scraping techniques and Elasticsearch
+pipelines.
+Projects
+•Designed and implemented a real-time monitoring system for global threat tracking, visualized in Kibana.
+•Programming Languages: Python, C, SQL
+•INE Security - EJPT (In Progress)
+•TryHackMe - Advent of Cyber 2024 Dec 2024
+
+
+Certifications:
+•Implemented AES-256 encryption andHMAC for secure credential storage and data integrity.
+Certifications
+•Google Cybersecurity Professional Certificate Feb - May 2024
+
+

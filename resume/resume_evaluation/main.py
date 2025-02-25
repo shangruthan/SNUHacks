@@ -1,33 +1,54 @@
 # main.py
-
 import os
-from jd import job_description
-from resume_parser import parse_resume
 from core import evaluate_resume
 
-# Path to the resume PDF (in the same folder as main.py)
-resume_path = r"SDE_resume.pdf"
+def read_parsed_file(file_path):
+    """
+    Read a parsed file (jd.txt or resume.txt) and return a dictionary with headings and content.
+    
+    :param file_path: Path to the parsed file.
+    :return: Dictionary with headings as keys and content as values.
+    """
+    parsed_data = {}
+    with open(file_path, "r", encoding="utf-8") as file:
+        current_heading = None
+        for line in file:
+            line = line.strip()
+            if line.endswith(":"):  # Detect headings
+                current_heading = line[:-1]  # Remove the colon
+                parsed_data[current_heading] = ""
+            elif current_heading:  # Add content under the current heading
+                parsed_data[current_heading] += line + "\n"
+    return parsed_data
 
-# Verify the file existsls
-if not os.path.exists(resume_path):
+# Path to the job description file (jd.txt)
+jd_path = "jd.txt"
+
+# Path to the resume file (resume.txt)
+resume_path = "resume.txt"
+
+# Verify the files exist
+if not os.path.exists(jd_path):
+    print(f"Error: File '{jd_path}' not found in the current directory.")
+elif not os.path.exists(resume_path):
     print(f"Error: File '{resume_path}' not found in the current directory.")
 else:
-    print(f"File '{resume_path}' found. Proceeding with parsing...")
+    print(f"Files '{jd_path}' and '{resume_path}' found. Proceeding with evaluation...")
 
-    # Get headings from the job description
-    headings = list(job_description.keys())
+    # Read the job description from jd.txt
+    job_description = read_parsed_file(jd_path)
 
-    # Parse the resume
-    resume_data = parse_resume(resume_path, headings)
+    # Read the resume from resume.txt
+    resume_data = read_parsed_file(resume_path)
 
     # Print job description and parsed resume data for debugging
     print("\nJob Description:")
     for section, text in job_description.items():
-        print(f"{section}: {text}")
+        print(f"{section}:\n{text}")
 
     print("\nParsed Resume Data:")
     for section, text in resume_data.items():
-        print(f"{section}: {text}")
+        print(f"{section}:\n{text}")
 
     # Evaluate the resume
     scores, aggregate_score = evaluate_resume(job_description, resume_data)
