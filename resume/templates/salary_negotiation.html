@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Negotiation Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        async function generateNegotiation() {
+            const userInput = document.getElementById("user_input").value.trim();
+            const responseDiv = document.getElementById("response");
+
+            if (!userInput) {
+                responseDiv.innerHTML = `<p class="error">⚠️ Please enter job role, experience, and expectations.</p>`;
+                return;
+            }
+
+            responseDiv.innerHTML = `<p><strong>Generating...</strong> ⏳</p>`;
+
+            try {
+                const response = await fetch("/generate", {  // Updated endpoint to match the main app
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ user_input: userInput })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    responseDiv.innerHTML = `<div class="response"><strong>📜 Negotiation Script:</strong><br>${data.negotiation_script}</div>`;
+                } else {
+                    responseDiv.innerHTML = `<p class="error">❌ ${data.error || "Error generating response."}</p>`;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = `<p class="error">❌ Network error. Please try again.</p>`;
+            }
+        }
+    </script>
+    <style>
+        textarea {
+            width: 100%; /* Full width of the container */
+            height: 120px; /* Increased height for better visibility */
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: none; /* Prevent resizing */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+
+        textarea:focus {
+            border-color: #007bff; /* Change border color on focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+            outline: none; /* Remove default outline */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Salary Negotiation Tool</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Enter Your Details</h2>
+            <p>Welcome to the Salary Negotiation Tool! This tool helps you generate a professional negotiation script tailored to your job offer. Simply enter your job role, experience, and salary expectations in the text area below.</p>
+            <p>Once you click the "Generate Script" button, the tool will create a structured negotiation script that you can use during your discussions with potential employers.</p>
+            <textarea id="user_input" placeholder="Enter your job role, experience, and expectations..."></textarea><br>
+            <button onclick="generateNegotiation()">Generate Script</button>
+            <div id="response"></div>
+        </div>
+        <a href="/individual_dashboard">Go Back to Dashboard</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html>

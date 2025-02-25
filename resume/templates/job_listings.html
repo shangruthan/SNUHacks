@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .job-listings {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Center the items */
+            gap: 20px; /* Space between cards */
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+        }
+        .job-listing {
+            background-color: #f9f9f9; /* Light background for cards */
+            border: 1px solid #e2e8f0; /* Light border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Padding inside the card */
+            width: 250px; /* Fixed width for cards */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s; /* Smooth scaling on hover */
+        }
+        .job-listing:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+        .view-job-button {
+            background-color: #2563eb; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            padding: 10px; /* Button padding */
+            border-radius: 5px; /* Rounded button corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth background color change */
+            margin-top: 2px;
+        }
+        .view-job-button:hover {
+            background-color: #1e40af; /* Darker button color on hover */
+        }
+    </style>
 </head>
 <body>
     <header>

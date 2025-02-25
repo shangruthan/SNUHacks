@@ -586,6 +586,65 @@ def generate_interview_questions():
 
     return render_template('generate_interview_questions.html')  # Render the form for input
 
+# ============ Salary Negotiation Tool (from negotiator.py) ============
+
+@app.route('/salary_negotiation')
+def salary_negotiator():
+    return render_template('salary_negotiation.html')  # Renamed template to avoid collision
+
+@app.route('/generate_negotiation', methods=['POST'])
+def generate_negotiation():
+    try:
+        user_input = request.json.get("user_input")
+
+        if not user_input:
+            return jsonify({"error": "No input provided"}), 400
+
+        # More structured and professional system prompt
+        system_message = """
+        You are an expert salary negotiator. Generate a professional, structured salary negotiation script without using symbols like asterisks (**), quotation marks (""), or dollar signs ($). 
+        The response should be in clear paragraph format, properly spaced, and easy to read. Ensure logical flow and maintain professionalism.
+
+        Format:
+        1. Introduction
+        - Express gratitude for the offer.
+        - Mention the position and company name.
+        - Show enthusiasm about the opportunity.
+        - Introduce the discussion on salary.
+
+        2. Justification
+        - Mention research on market salary range.
+        - Highlight years of experience, skills, certifications, and achievements.
+        - Clearly justify why a higher salary is reasonable.
+
+        3. Alternative Negotiation Strategies
+        - Discuss other compensation options if salary flexibility is limited.
+        - Mention bonuses, benefits, stock options, or flexible work arrangements.
+
+        4. Confidence and Assertiveness
+        - Express excitement about the role.
+        - Clearly state that the goal is fair compensation, not negotiation for its own sake.
+        - Reinforce the value you bring to the company.
+
+        5. Closing Statement
+        - Express willingness to discuss further.
+        - Request a follow-up conversation.
+        - End with a professional and positive note.
+
+        Ensure the response is concise, well-structured, and professional.
+        """
+
+        # Call Groq API through GroqClient
+        generated_script = groq_client.send_prompt(system_message, user_input)
+
+        if not generated_script:
+            return jsonify({"error": "No response generated from Groq API"}), 500
+
+        return jsonify({"negotiation_script": generated_script})
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 # Call the database initialization function
 if __name__ == '__main__':
     init_db()  # Initialize the database
