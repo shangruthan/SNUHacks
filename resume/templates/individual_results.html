@@ -15,7 +15,12 @@
         <!-- Displaying the analysis content -->
         <h4>Analysis Content:</h4>
         <div id="analysis_content">{{ analysis_content | safe }}</div>  <!-- Use safe to render HTML content -->
-
+        <div id="job-role">
+            <h3>Identified Job Role:</h3>
+            <p>{{ job_role }}</p> <!-- This will display the job role identified by Groq -->
+        </div>
+        <h3> Job Role Roadmap:</h3>
+        <img src="static/images/CyberSec.png">
         <a href="/individual_dashboard">Go Back to Dashboard</a>
     </main>
     <footer>

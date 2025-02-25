@@ -2,14 +2,14 @@
 
 from flask import Flask, request, render_template, redirect, url_for
 import os
-from resume_evaluation.jd import job_description
-from resume_evaluation.resume_parser import parse_resume
+from resume_evaluation.job_description import job_description
+from utils.resume_parser import parse_resume
 from resume_evaluation.core import evaluate_resume
 import sqlite3  # New import for database
 import json  # New import for handling JSON
-from skills_gap_analyzer.main import missing_skills
+from skills_gap_analyzer.main import analyze_missing_skills
 from skills_gap_analyzer.resume import resume_information
-from skills_gap_analyzer.job_description import jd
+from resume_evaluation.job_description import job_description
 from resume_enhancer.main import enhance_section
 import markdown  # Import the markdown library
 
@@ -183,7 +183,7 @@ def individual_dashboard():
 def individual_results():
     # Here you would normally process the uploaded files
     # For now, we will use the existing resume and job description for analysis
-    suggestions = missing_skills(resume_information, jd)
+    suggestions, job_role = analyze_missing_skills(resume_information, job_description)
     print(suggestions)  # Print the Groq response in the terminal
     # Get suggestions from the skills gap analyzer
     match_score = "0.7"  # Placeholder match score (you can calculate this based on the analysis if needed)
@@ -191,7 +191,6 @@ def individual_results():
     with open('resume/skills_gap_analyzer/analysis.txt', 'w') as file:
         file.write(suggestions)
    
-
     # Read the content of analysis.txt
     with open('resume/skills_gap_analyzer/analysis.txt', 'r') as file:
         analysis_content = file.read()  # Read the entire content of the file
@@ -199,7 +198,7 @@ def individual_results():
     # Convert the Markdown content to HTML
     analysis_content_html = markdown.markdown(analysis_content)
 
-    return render_template('individual_results.html', match_score=match_score, suggestions=suggestions, analysis_content=analysis_content_html)  # Pass HTML content to the template
+    return render_template('individual_results.html', match_score=match_score, suggestions=suggestions, analysis_content=analysis_content_html, job_role=job_role)  # Pass job role to the template
 
 @app.route('/company_dashboard', methods=['GET', 'POST'])
 def company_dashboard():
