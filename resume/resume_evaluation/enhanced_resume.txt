@@ -1,0 +1,140 @@
+## Education
+### Education
+#### Bachelor's Degree in Computer Science
+* **Institution:** Shiv Nadar University, Chennai
+* **GPA:** 8.0/10
+* **Relevant Courses:**
+	+ Data Structures and Algorithms
+	+ Computer Systems and Networks
+	+ Database Management Systems
+	+ Software Engineering
+	+ Web Development
+* **Certifications/Achievements:**
+	+ Completed various projects on GitHub, demonstrating proficiency in programming languages such as Java, Python, and JavaScript
+	+ Participated in coding challenges and hackathons, showcasing problem-solving skills and ability to work in Agile environments
+#### Secondary Education
+* **Institution:** Thamarai International School, Thanjavur
+* **Relevant Subjects:**
+	+ Mathematics
+	+ Physics
+	+ Computer Science
+
+### Contact Information
+* **Phone:** +91 7418242633
+* **Email:** [rejen22110019@snuchennai.edu.in](mailto:rejen22110019@snuchennai.edu.in)
+* **LinkedIn:** [linkedin.com/in/rejen-thompson](http://linkedin.com/in/rejen-thompson)
+* **GitHub:** [github.com/rejen-thompson](http://github.com/rejen-thompson)
+* **Blog:** [rejen-thompson.blogspot.com](http://rejen-thompson.blogspot.com)
+
+Note: I've reorganized the section to focus on the education and relevant coursework, and added a separate section for contact information. I've also used keywords from the job description to highlight relevant skills and experiences. This should help with ATS optimization and make the section more concise and effective.
+
+## Experience
+### Enhanced Experience Section
+Rejen Thompson
+#### Professional Summary
+Results-driven software development engineer with a strong background in Agile development environments, cloud platforms, and cybersecurity. Proven expertise in designing, developing, and deploying scalable, high-performance applications, with a passion for ensuring robust security measures and contributing to open-source projects.
+
+#### Experience
+* **Software Development Engineer**, Various Projects (May 2024 - Present)
+	+ Participated in all phases of the software development lifecycle, from ideation to deployment and beyond, utilizing Agile development methodologies.
+	+ Implemented robust security measures, including authentication, authorization, and data protection protocols, to ensure the security and integrity of applications.
+	+ Designed and developed efficient, reusable, and reliable code across the full stack, using programming languages such as **Java**, **Python**, and **JavaScript**, along with frameworks like **Spring Boot**, **React.js**, and **Node.js**.
+	+ Collaborated with cross-functional teams to deliver exceptional software solutions, leveraging strong written and verbal communication skills.
+* **Technical Cybersecurity Content Writer**, Bridge (November 2024 - December 2024)
+	+ Simplified complex concepts for diverse audiences, enhancing content accessibility and engagement, and demonstrating excellent problem-solving skills.
+	+ Contributed to the development of cybersecurity-related content, utilizing knowledge of database technologies, including **SQL** (**PostgreSQL/MySQL**) and **NoSQL** (**MongoDB**).
+* **Security Vulnerability Monitoring System** (September 2024 - October 2024)
+	+ Developed a security vulnerability monitoring system using **Python**, **ELK Stack**, and **Docker**, showcasing hands-on experience with cloud platforms and CI/CD pipelines.
+	+ Ensured secure session management and implemented robust authentication mechanisms, utilizing **AWS** and other network and cloud tools.
+* **SecureAuth** (May 2024)
+	+ Designed and developed a secure authentication system using **Python**, **MySQL**, and **Cryptography**, demonstrating proficiency in programming languages and frameworks.
+	+ Contributed to the development of security-related projects, leveraging knowledge of cybersecurity principles and practices.
+
+#### Achievements and Bug Bounty
+* Discovered and reported 7 critical vulnerabilities in **PHP Gurukul**, leading to 1 **CVE** and securing 5,000+ users.
+* Achieved top placements in **CTF** competitions: 4th in **Edita CTF**, 6th in **VIT CTF**.
+* Completed 30+ **TryHackMe** rooms and engaged in **PortSwigger Labs**, **OWASP Juice Shop**, and **Natas**.
+* Organized **Freshers’ Day 2024** and led the core team for a major college event, demonstrating strong leadership and teamwork skills.
+
+### Keywords
+* Agile development
+* Cloud platforms (**AWS**, **Azure**)
+* Cybersecurity
+* Database technologies (**SQL**, **NoSQL**)
+* Programming languages (**Java**, **Python**, **JavaScript**)
+* Frameworks (**Spring Boot**, **React.js**, **Node.js**)
+* CI/CD pipelines
+* Version control tools (**Git**)
+* Security vulnerability monitoring
+* Authentication and authorization
+* Data protection protocols
+* Open-source projects
+* Bug bounty
+* CTF competitions
+
+Note: I've enhanced the experience section to better match the job description, focusing on ATS optimization by including relevant keywords, formatting, and highlighting the candidate's skills and achievements.
+
+## Skills
+### Enhanced Skills Section
+#### Technical Skills
+* **Programming Languages:** Java, Python, JavaScript
+* **Frameworks:** Spring Boot, React.js, Node.js
+* **Cloud Platforms:** AWS (EC2, S3, Lambda), Azure
+* **CI/CD Pipelines:** Git, Jenkins
+* **Version Control Tools:** Git
+* **Database Technologies:** SQL (PostgreSQL/MySQL), NoSQL (MongoDB)
+* **Security Measures:** Authentication, Authorization, Data Protection Protocols
+* **Testing:** Unit Testing, Integration Testing, Test Automation
+
+#### Relevant Experience
+* **Software Development:** Participated in all phases of the software development lifecycle, from ideation to deployment and beyond
+* **Agile Development:** Proven track record of working in Agile development environments
+* **Cloud-Based Applications:** Hands-on experience with cloud platforms and CI/CD pipelines
+* **Cybersecurity:** Implemented robust security measures, including authentication, authorization, and data protection protocols
+
+#### Additional Skills
+* **Log Analysis Tools:** Kibana, Elasticsearch, Logstash
+* **Penetration Testing Tools:** Burp Suite, Metasploit, Nessus, Nmap, ZAP
+* **Frameworks and Methodologies:** MITRE ATT&CK, PASTA, OWASP TOP 10
+* **Operating Systems:** OS
+* **Computer Networks:** Computer Networks
+* **Cybersecurity:** Cybersecurity, Cryptography, Network Security, Cloud Security, System Security, Cyber Forensics, Web Technologies
+
+Note: I've reorganized the skills section to better match the job description, highlighting technical skills, relevant experience, and additional skills. I've also removed the introductory paragraph and focused on using keywords and phrases from the job description to improve ATS optimization.
+
+## Projects
+### Projects
+* **ShadowSpot**: Developed an External Asset Management (EASM) tool to detect exposure in external assets and monitor vulnerabilities, utilizing **Agile development methodologies** and **CI/CD pipelines**.
+* **DarkFlash**: Engineered a dark web monitoring system, leveraging **advanced scraping techniques**, **Elasticsearch pipelines**, and **cloud-based infrastructure (AWS)** to ensure **scalability** and **reliability**.
+* **Real-Time Threat Tracking System**: Designed and implemented a real-time monitoring system for global threat tracking, visualized in **Kibana**, and integrated with **RESTful APIs** and **microservices**.
+* **Technical Skills**: Proficient in **programming languages** such as **Python**, **Java**, **JavaScript**, and **SQL**, with experience in **frameworks** like **Spring Boot**, **React.js**, and **Node.js**.
+* **Certifications and Training**:
+	+ INE Security - EJPT (In Progress)
+	+ TryHackMe - Advent of Cyber 2024 (Completed, Dec 2024)
+	+ **Cloud Platforms**: Experienced with **AWS (EC2, S3, Lambda)** and **Azure**, with a strong understanding of **cloud security measures**, including **authentication**, **authorization**, and **data protection protocols**.
+	+ **Version Control**: Proficient in **Git**, with experience in **unit testing**, **integration testing**, and **test automation** to ensure **code quality**.
+
+Note: I've enhanced the section to better match the job description by:
+
+* Using keywords from the job description, such as **Agile development methodologies**, **CI/CD pipelines**, **cloud-based infrastructure**, **scalability**, and **reliability**.
+* Emphasizing technical skills, such as **programming languages**, **frameworks**, and **cloud platforms**.
+* Highlighting experience with **security measures**, **authentication**, **authorization**, and **data protection protocols**.
+* Including **certifications and training** to demonstrate commitment to professional development.
+* Using a consistent format and bullet points to make the section easy to read and scan.
+
+## Certifications
+### Certifications
+* **Google Cybersecurity Professional Certificate**, Feb 2024 - May 2024
+* **Proficient in Cloud Security**: Experienced in implementing robust security measures, including authentication, authorization, and data protection protocols
+* **Familiarity with Industry Certifications**: Knowledge of certifications such as AWS Certified Developer, Microsoft Certified: Azure Developer Associate, or Oracle Certified Professional, Java SE Programmer
+
+### Technical Skills
+* **Programming Languages**: Java, Python, JavaScript
+* **Frameworks**: Spring Boot, React.js, Node.js
+* **Cloud Platforms**: AWS (EC2, S3, Lambda), Azure
+* **CI/CD Pipelines**: Git, Jenkins
+* **Database Technologies**: SQL (PostgreSQL/MySQL), NoSQL (MongoDB)
+* **Security**: AES-256 encryption, HMAC, secure credential storage, data integrity
+
+Note: I've added relevant technical skills to the section, using keywords from the job description to improve ATS optimization. I've also reformatted the certifications section to make it more concise and easy to read.
+

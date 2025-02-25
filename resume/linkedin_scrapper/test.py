@@ -1,56 +1,83 @@
 import json
-from linkedin_scraper import Person, actions
-from selenium import webdriver
-from selenium.webdriver.edge.service import Service
-from selenium.webdriver.edge.options import Options
+import time
+from linkedin_api import Linkedin
+import os
+import sys
 
-# Set up Edge options (if needed)
-options = Options()
-options.add_argument('--start-maximized')  # Example option to start maximized
+TEST_LINKEDIN_USERNAME = ("shangrutha@gmail.com")
+TEST_LINKEDIN_PASSWORD = ("-Ye:yYwf93Aq49h")
 
-# Path to Edge WebDriver (msedgedriver.exe) in your folder
-service = Service(executable_path='C:/Users/shang/Downloads/edgedriver_win64/msedgedriver.exe')
 
-# Initialize the Edge WebDriver
-driver = webdriver.Edge(service=service, options=options)
+def main():
+    if not (TEST_LINKEDIN_USERNAME and TEST_LINKEDIN_PASSWORD):
+        print("Test config incomplete. Exiting...")
+        sys.exit()
 
-try:
-    # Log into LinkedIn (replace 'your_username' and 'your_password' with actual credentials)
-    actions.login(driver, "thisisnk3794@gmail.com", "nareshkumar")  # Enter your LinkedIn credentials
+    # Initialize the API client
+    # Replace with your LinkedIn credentials
+    api = Linkedin(TEST_LINKEDIN_USERNAME, TEST_LINKEDIN_PASSWORD, refresh_cookies=True)
 
-    # Scrape a LinkedIn profile
-    profile_url = "https://www.linkedin.com/in/rejen-thompson-765271258"  # Example profile URL
-    person = Person(profile_url, driver=driver, scrape=True)
+    # Example profile IDs to fetch
+    profile_ids = ["narer"]
 
-    # Extract profile data
-    profile_data = {
-        "Name": person.name,
-        "Job Title": person.job_title,
-        "Company": person.company,
-        "Education": [{
-            "Institution": edu.institution_name if hasattr(edu, 'institution_name') else None,
-            "Degree": edu.degree if hasattr(edu, 'degree') else None,
-            "Field of Study": edu.field_of_study if hasattr(edu, 'field_of_study') else None,
-            "Dates": edu.dates if hasattr(edu, 'dates') else None
-        } for edu in person.educations] if hasattr(person, 'educations') else [],
-        "Skills": person.skills if hasattr(person, 'skills') else [],
-        "Experiences": [{
-            "Title": exp.position_title if hasattr(exp, 'position_title') else None,
-            "Company": exp.institution_name if hasattr(exp, 'institution_name') else None,
-            "Dates": exp.dates if hasattr(exp, 'dates') else None,
-            "Location": exp.location if hasattr(exp, 'location') else None
-        } for exp in person.experiences] if hasattr(person, 'experiences') else []
-    }
+    for profile_id in profile_ids:
+        try:
+            # Get profile using public ID
+            profile = api.get_profile(public_id=profile_id)
 
-    # Output to JSON and save to file
-    with open('profile_data.json', 'w') as json_file:
-        json.dump(profile_data, json_file, indent=4)
+            # Print basic information
+            print("\nBasic Information:")
+            print(f"Name: {profile['firstName']} {profile['lastName']}")
+            print(f"Headline: {profile.get('headline', 'No headline')}")
+            print(f"Location: {profile.get('locationName', 'No location')}")
 
-    print("Profile data saved to profile_data.json")
+            # Print work experience
+            print("\nWork Experience:")
+            for job in profile.get("experience", []):
+                print(f"- {job.get('companyName')}: {job.get('title')}")
 
-except Exception as e:
-    print(f"An error occurred: {e}")
+            # Print education
+            print("\nEducation:")
+            for school in profile.get("education", []):
+                print(f"- {school.get('schoolName')}: {school.get('degreeName')}")
 
-finally:
-    # Close the Edge driver
-    driver.quit()
+            # Cache the profile data
+            cache_profile_data(profile_id, profile)
+
+            # Respect rate limits
+            time.sleep(2)
+
+        except Exception as e:
+            print(f"Error fetching profile {profile_id}: {str(e)}")
+
+
+def cache_profile_data(profile_id, profile_data):
+    """Cache profile data to a JSON file"""
+    try:
+        # Create a cache directory if it doesn't exist
+        import os
+
+        os.makedirs("cache", exist_ok=True)
+
+        cache_file = f"profile_{profile_id}.json"
+        with open(cache_file, "w") as f:
+            json.dump(profile_data, f, indent=2)
+        print(f"\nProfile data cached to {cache_file}")
+
+    except Exception as e:
+        print(f"Error caching profile data: {str(e)}")
+
+
+def safely_access_nested_data(profile, *keys, default=None):
+    """Safely access nested dictionary data"""
+    try:
+        value = profile
+        for key in keys:
+            value = value[key]
+        return value
+    except (KeyError, TypeError, IndexError):
+        return default
+
+
+if __name__ == "__main__":
+    main()
