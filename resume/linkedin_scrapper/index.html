@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        h1 {
+            color: #0077b5;
+            text-align: center;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #username {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            width: 300px;
+        }
+        #search {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0077b5;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        #search:hover {
+            background-color: #006097;
+        }
+        #profile {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile-headline {
+            color: #666;
+            margin-top: 5px;
+        }
+        .profile-info {
+            margin-bottom: 15px;
+        }
+        .profile-info h3 {
+            color: #0077b5;
+            margin-bottom: 5px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LinkedIn Profile Viewer</h1>
+    <div class="search-container">
+        <input type="text" id="username" placeholder="Enter LinkedIn username">
+        <button id="search">Search</button>
+    </div>
+    <div id="profile"></div>
+
+    <script>
+        const dummyData = {
+            "firstName": "Aditya",
+            "lastName": "B",
+            "headline": "Student @ Shiv Nadar University Chennai | Backend Developer | Community Manager @ ComputerLunch",
+            "locationName": "Chennai, Tamil Nadu, India",
+            "summary": "Hey there 👋! I'm Aditya B and I specialize in backend development, eagerly seeking new challenges and opportunities. My core expertise lies in Python, complemented by substantial knowledge in Rust and TypeScript.\n\nWhile my primary focus is on scalable backend technologies, I've also been involved in community management, where I've learned valuable lessons in collaboration and user interaction.\n\nI invite you to connect and engage with me on insights, collaborations, or any exciting opportunities in the world of software development and beyond.\n\nLooking forward to being a part of our shared professional journey!",
+            "industryName": "Software Development",
+            "displayPictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQEkEn6Np6cDuw/profile-displayphoto-shrink_400_400/0/1706027893437?e=1746057600&v=beta&t=yuwtA9TF6hLODNUpnZX2A8PtlY1YgRzs23hprZZ81co",
+            "experience": [
+                {
+                    "title": "Community Manager",
+                    "companyName": "Computer Lunch Games",
+                    "timePeriod": {
+                        "startDate": {
+                            "month": 7,
+                            "year": 2022
+                        }
+                    }
+                },
+                {
+                    "title": "Offensive Security Engineer",
+                    "companyName": "CyberXTron Technologies",
+                    "timePeriod": {
+                        "startDate": {
+                            "month": 2,
+                            "year": 2024
+                        },
+                        "endDate": {
+                            "month": 8,
+                            "year": 2024
+                        }
+                    }
+                }
+            ],
+            "education": [
+                {
+                    "schoolName": "Shiv Nadar University Chennai",
+                    "degreeName": "Bachelor of Technology - BTech Computer Science and Engineering",
+                    "fieldOfStudy": "Cybersecurity",
+                    "timePeriod": {
+                        "startDate": {
+                            "year": 2022
+                        },
+                        "endDate": {
+                            "year": 2026
+                        }
+                    }
+                }
+            ]
+        };
+
+        document.getElementById('search').addEventListener('click', fetchProfile);
+
+        async function fetchProfile() {
+            const username = document.getElementById('username').value;
+            const profileDiv = document.getElementById('profile');
+            profileDiv.innerHTML = 'Loading...';
+
+            try {
+                // In a real scenario, you would replace this with an actual API call
+                // const response = await fetch(`https://api.example.com/linkedin/${username}`);
+                // const data = await response.json();
+
+                // Simulating API call with a delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                const data = dummyData; // Using dummy data as fallback
+
+                displayProfile(data);
+            } catch (error) {
+                console.error('Error fetching profile:', error);
+                profileDiv.innerHTML = 'Error fetching profile. Please try again.';
+            }
+        }
+
+        function displayProfile(data) {
+            const profileDiv = document.getElementById('profile');
+            profileDiv.innerHTML = `
+                <div class="profile-header">
+                    <img src="${data.displayPictureUrl}" alt="${data.firstName} ${data.lastName}" class="profile-picture">
+                    <div>
+                        <div class="profile-name">${data.firstName} ${data.lastName}</div>
+                        <div class="profile-headline">${data.headline}</div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h3>Location</h3>
+                    <p>${data.locationName}</p>
+                </div>
+                <div class="profile-info">
+                    <h3>Industry</h3>
+                    <p>${data.industryName}</p>
+                </div>
+                <div class="profile-info">
+                    <h3>Summary</h3>
+                    <p>${data.summary}</p>
+                </div>
+                <div class="profile-info">
+                    <h3>Experience</h3>
+                    ${data.experience.map(exp => `
+                        <div class="experience-item">
+                            <strong>${exp.title}</strong> at ${exp.companyName}<br>
+                            ${exp.timePeriod.startDate.month}/${exp.timePeriod.startDate.year} - 
+                            ${exp.timePeriod.endDate ? `${exp.timePeriod.endDate.month}/${exp.timePeriod.endDate.year}` : 'Present'}
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="profile-info">
+                    <h3>Education</h3>
+                    ${data.education.map(edu => `
+                        <div class="education-item">
+                            <strong>${edu.schoolName}</strong><br>
+                            ${edu.degreeName}, ${edu.fieldOfStudy}<br>
+                            ${edu.timePeriod.startDate.year} - ${edu.timePeriod.endDate.year}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
