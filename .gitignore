@@ -2,6 +2,6 @@
 /resume/resume_evaluation/__pycache__
 /resume/resume_enhancer/__pycache__
 # Ignore Python cache files
-__pycache__/
+*/__pycache__/
 *.pyc
 .gitignore

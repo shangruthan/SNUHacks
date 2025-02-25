@@ -36,6 +36,7 @@ def analyze_missing_skills(resume_info, job_desc, output_file="analysis.txt"):
 
     Resume:
     {resume_info}
+    Provide the result in proper markdown format
     """
 
     # New prompt to identify the job role

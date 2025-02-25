@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.get('name', 'My Portfolio') }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            color: white;
+            padding: 100px 50px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 { font-size: 3rem; font-weight: bold; }
+        .header p { font-size: 1.2rem; }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .section {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+        .btn-custom {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn-custom:hover { background: #218838; color: white; }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover { color: #ffd700; }
+        .skill-bar {
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .skill-bar-fill {
+            background: #007bff;
+            height: 10px;
+            border-radius: 5px;
+            transition: width 0.5s;
+        }
+        .project-card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover { transform: scale(1.02); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1 class="animate__animated animate__fadeInDown">{{ data.get('name', 'John Doe') }}</h1>
+            <p class="animate__animated animate__fadeInUp">{{ data.get('headline', 'Cybersecurity & Software Engineer') }}</p>
+            <a href="#" class="btn-custom animate__animated animate__fadeIn">Download Resume</a>
+            <div class="social-icons mt-3 animate__animated animate__fadeIn">
+                <a href="{{ data.get('contact', {}).get('linkedin', '#') }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="{{ data.get('contact', {}).get('github', '#') }}" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <!-- About -->
+        <div class="section animate__animated animate__fadeIn">
+            <h2>About Me</h2>
+            <p>{{ data.get('summary', 'A passionate professional...') }}</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section animate__animated animate__fadeIn">
+            <h2>Experience</h2>
+            {% if data.get('experience') %}
+                <ul>
+                    {% for job in data['experience'] %}
+                        <li>
+                            <strong>{{ job.get('position', 'Role') }}</strong> at <strong>{{ job.get('company', 'Company') }}</strong> ({{ job.get('duration', 'Duration') }})
+                            <p>{{ job.get('description', '') }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No experience details available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Education -->
+        <div class="section animate__animated animate__fadeIn">
+            <h2>Education</h2>
+            {% if data.get('education') %}
+                <ul>
+                    {% for edu in data['education'] %}
+                        <li><strong>{{ edu.get('degree', 'Degree') }}</strong> - {{ edu.get('institution', 'Institution') }} ({{ edu.get('year', 'Year') }})</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No education details available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Skills -->
+    <div class="section animate__animated animate__fadeIn">
+        <h2>Skills</h2>
+        {% if data.get('skills') %}
+            <ul>
+                {% for skill in data['skills'] %}
+                     <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No skills listed.</p>
+        {% endif %}
+    </div>
+
+        <!-- Projects -->
+        <div class="section animate__animated animate__fadeIn">
+            <h2>Projects</h2>
+            {% if data.get('projects') %}
+                <div class="row">
+                    {% for project in data['projects'] %}
+                        <div class="col-md-6">
+                            <div class="project-card">
+                                <h3>{{ project.get('name', 'Project') }}</h3>
+                                <p>{{ project.get('description', '') }}</p>
+                                <a href="{{ project.get('link', '#') }}" class="btn-custom" target="_blank">View Project</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No projects listed.</p>
+            {% endif %}
+        </div>
+
+        <!-- Contact -->
+        <div class="section animate__animated animate__fadeIn">
+            <h2>Contact</h2>
+            <p>Email: {{ data.get('contact', {}).get('email', 'example@example.com') }}</p>
+            <p>Phone: {{ data.get('contact', {}).get('phone', 'Not available') }}</p>
+            <p>Location: {{ data.get('contact', {}).get('location', 'City, Country') }}</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer animate__animated animate__fadeInUp">
+        <p>&copy; {{ data.get('name', 'John Doe') }} 2023. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-bar-fill');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        });
+    </script>
+</body>
+</html>

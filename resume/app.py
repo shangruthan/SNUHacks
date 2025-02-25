@@ -1,7 +1,9 @@
 # SNUHacks/resume/ATS_project/app.py
 
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, jsonify
 import os
+import uuid
+from werkzeug.utils import secure_filename
 from resume_evaluation.job_description import job_description
 from utils.resume_parser import parse_resume
 from resume_evaluation.core import evaluate_resume
@@ -12,12 +14,26 @@ from skills_gap_analyzer.resume import resume_information
 from resume_evaluation.job_description import job_description
 from resume_enhancer.main import enhance_section
 import markdown  # Import the markdown library
+from groq_utils import GroqClient  # New import for Groq client
+
+# Import additional libraries from portfolio.py
+from PyPDF2 import PdfReader
+from groq import Groq
 
 app = Flask(__name__)
 
 # Path to the resume upload folder
 UPLOAD_FOLDER = 'uploads'
+ALLOWED_EXTENSIONS = {'pdf', 'docx'}
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Initialize Groq API client
+groq_client = GroqClient(api_key="Placeholder")  # Replace with your actual API key
+
+# Helper function to check allowed file types
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # Initialize the database
 def init_db():
@@ -37,9 +53,184 @@ def init_db():
     conn.commit()
     conn.close()
 
+# Functions from portfolio.py for file parsing
+def read_pdf(file_path):
+    try:
+        pdf_reader = PdfReader(file_path)
+        text = '\n'.join([page.extract_text() or '' for page in pdf_reader.pages])
+        return text.strip()
+    except Exception as e:
+        print(f"Error reading PDF: {e}")
+        return None
+
+
+def parse_resume_file(file_path):
+    ext = file_path.rsplit('.', 1)[-1].lower()
+    if ext == 'pdf':
+        return read_pdf(file_path)
+    else:
+        print("OnlyPDFs")
+    return None
+
+def process_resume_with_groq(text):
+    try:
+        response = groq_client.chat.completions.create(
+            messages=[
+                {"role": "system", "content": """
+                    You are an AI that extracts highly detailed and structured resume information in JSON format. 
+                    Your output should be a structured JSON object with the following fields:
+                    {
+                        "name": "Full Name",
+                        "headline": "Short Professional Title",
+                        "summary": "A detailed bio about the user (3-5 sentences highlighting key skills, achievements, and career goals)",
+                        "experience": [
+                            {
+                                "position": "Job Title",
+                                "company": "Company Name",
+                                "location": "City, Country",
+                                "duration": "Start Date - End Date",
+                                "description": [
+                                    "Detailed description of responsibilities (3-5 bullet points)",
+                                    "Key achievements (e.g., 'Increased sales by 20%', 'Reduced system downtime by 30%')",
+                                    "Technologies/tools used (e.g., 'Python, React, AWS')"
+                                ],
+                                "projects": [
+                                    {
+                                        "name": "Project Name",
+                                        "description": "Detailed description of the project (3-5 bullet points)",
+                                        "technologies": ["Tech1", "Tech2", "Tech3"],
+                                        "outcome": "Key outcomes or impact of the project"
+                                    }
+                                ]
+                            }
+                        ],
+                        "education": [
+                            {
+                                "degree": "Degree Name",
+                                "institution": "University Name",
+                                "location": "City, Country",
+                                "duration": "Start Date - End Date",
+                                "gpa": "GPA (if available)",
+                                "courses": ["Course1", "Course2", "Course3"],
+                                "achievements": [
+                                    "Notable achievements (e.g., 'Dean's List', 'Scholarship Recipient')"
+                                ],
+                                "thesis": "Thesis Title (if applicable)",
+                                "extracurriculars": [
+                                    "Extracurricular activities (e.g., 'President of Coding Club')"
+                                ]
+                            }
+                        ],
+                        "skills": {
+                            "technical": ["Skill1", "Skill2", "Skill3"],
+                            "soft": ["Skill1", "Skill2", "Skill3"],
+                            "tools": ["Tool1", "Tool2", "Tool3"],
+                            "languages": ["Language1", "Language2"]
+                        },
+                        "projects": [
+                            {
+                                "name": "Project Title",
+                                "description": "Detailed description of the project (3-5 bullet points)",
+                                "technologies": ["Tech1", "Tech2", "Tech3"],
+                                "outcome": "Key outcomes or impact of the project",
+                                "duration": "Start Date - End Date",
+                                "role": "Role in the project (e.g., 'Team Lead', 'Developer')",
+                                "link": "Project URL (if available)"
+                            }
+                        ],
+                        "courses_and_certifications": [
+                            {
+                                "name": "Course/Certification Name",
+                                "issuer": "Issuing Organization",
+                                "duration": "Start Date - End Date",
+                                "description": "Brief description of the course/certification",
+                                "skills_gained": ["Skill1", "Skill2", "Skill3"]
+                            }
+                        ],
+                        "achievements": [
+                            {
+                                "title": "Achievement Title",
+                                "description": "Detailed description of the achievement",
+                                "year": "Year of Achievement",
+                                "issuer": "Issuing Organization (if applicable)"
+                            }
+                        ],
+                        "events": [
+                            {
+                                "name": "Event Name",
+                                "description": "Detailed description of the event",
+                                "role": "Role in the event (e.g., 'Speaker', 'Organizer')",
+                                "year": "Year of Event",
+                                "location": "City, Country"
+                            }
+                        ],
+                        "contact": {
+                            "email": "email@example.com",
+                            "phone": "Phone Number",
+                            "location": "City, Country",
+                            "linkedin": "LinkedIn URL",
+                            "github": "GitHub URL",
+                            "portfolio": "Personal Portfolio URL"
+                        }
+                    }
+                    Respond ONLY with valid JSON and no extra text.
+                """},
+                {"role": "user", "content": text}
+            ],
+            model="llama-3.3-70b-versatile"
+        )
+
+        response_data = response.choices[0].message.content.strip()
+
+        try:
+            parsed_data = json.loads(response_data)
+            return parsed_data
+        except json.JSONDecodeError:
+            print("🚨 JSON Decode Error! Attempting cleanup...")
+            start_idx = response_data.find("{")
+            end_idx = response_data.rfind("}") + 1
+            if start_idx != -1 and end_idx != -1:
+                cleaned_json = response_data[start_idx:end_idx]
+                return json.loads(cleaned_json)
+            return {"error": "Invalid JSON response", "details": response_data}
+
+    except Exception as e:
+        print(f"Groq API error: {e}")
+        return {"error": str(e)}
+
 @app.route('/')
 def home():
     return redirect(url_for('login'))  # Redirect to the login page
+
+@app.route('/generate_portfolio')
+def portfolio_generator():
+    return render_template('generate_portfolio.html')
+
+@app.route('/portfolio-upload', methods=['POST'])
+def portfolio_upload():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file uploaded'}), 400
+    
+    file = request.files['file']
+    if file.filename == '' or not allowed_file(file.filename):
+        return jsonify({'error': 'Invalid file type'}), 400
+    
+    filename = secure_filename(file.filename)
+    file_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{uuid.uuid4()}_{filename}")
+    file.save(file_path)
+    
+    resume_text = parse_resume_file(file_path)
+    if not resume_text:
+        os.remove(file_path)
+        return jsonify({'error': 'Failed to extract text'}), 500
+    
+    parsed_resume = process_resume_with_groq(resume_text)
+    os.remove(file_path)
+    
+    if 'error' in parsed_resume:
+        return jsonify(parsed_resume), 500
+    
+    return render_template('modern_portfolio.html', data=parsed_resume)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -324,34 +515,6 @@ def extract_suggestions():
             suggestions = [line.strip() for line in suggestions_section.splitlines() if line.strip()]
             return suggestions
         return []  # Return an empty list if no suggestions found
-    
-@app.route('/generate_portfolio', methods=['GET', 'POST'])
-def generate_portfolio():
-    if request.method == 'POST':
-        if 'resume' not in request.files:
-            return "No file part"
-        file = request.files['resume']
-        if file.filename == '':
-            return "No selected file"
-        if file:
-            resume_path = os.path.join(UPLOAD_FOLDER, file.filename)
-            file.save(resume_path)
-
-            # Parse the resume to extract details
-            headings = ['name', 'contact', 'education', 'experience', 'skills', 'projects', 'certifications']
-            resume_data = parse_resume(resume_path, headings)
-
-            # Generate portfolio HTML
-            portfolio_html = render_template('portfolio_template.html', resume_data=resume_data)
-
-            # Save the portfolio HTML to a file (optional)
-            portfolio_path = os.path.join(UPLOAD_FOLDER, 'portfolio.html')
-            with open(portfolio_path, 'w') as f:
-                f.write(portfolio_html)
-
-            return portfolio_html
-
-    return render_template('upload_portfolio.html')
 
 # Route to display job listings
 @app.route('/job_listings')
@@ -391,6 +554,37 @@ def generate_resume():
 def resume_evaluation():
     # Assuming job_roles is a list of job roles you want to display in the dropdown
     return render_template('resume_evaluation.html',)
+
+@app.route('/generate_interview_questions', methods=['GET', 'POST'])
+def generate_interview_questions():
+    default_job_role  ="cybersecurity analyst"
+    if request.method == 'POST':
+        job_role = request.form.get('job_role')  # Get the job role from the form
+        if not job_role:
+            job_role = default_job_role
+        # Define the system message for Groq API
+        system_message = "You are a professional recruiter. Generate a list of interview questions for the following job role."
+
+        # Define the user prompt
+        user_prompt = f"""
+        Generate a list of interview questions for the job role: {job_role}.
+        Provide a variety of questions including technical, behavioral, and situational questions.
+        """
+
+        # Initialize Groq client
+        groq_client = GroqClient(api_key="your_groq_api_key_here")  # Ensure to replace with your actual API key
+
+        # Send the prompts to Groq API
+        print("Sending prompts to Groq API...")
+        questions = groq_client.send_prompt(system_message, user_prompt)
+        questions_html  = markdown.markdown(questions)
+        print(questions_html)
+        if questions:
+            return render_template('interview_questions.html', job_role=job_role, questions=questions_html)  # Render the questions in a new template
+        else:
+            return "No questions generated."
+
+    return render_template('generate_interview_questions.html')  # Render the form for input
 
 # Call the database initialization function
 if __name__ == '__main__':

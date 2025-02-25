@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions for {{ job_role }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .question {
+            margin-bottom: 10px; /* Reduced space between questions */
+            padding: 8px; /* Adjusted padding */
+            /* border: 1px solid #e2e8f0; Light border for better visibility */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for questions */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interview Questions for {{ job_role }}</h1>
+    </header>
+    <main>
+        <h2>Generated Questions:</h2>
+        <ul>
+            <p class="question">{{ questions | safe }}</p>
+        </ul>
+        <a href="/generate_interview_questions">Generate More Questions</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html>

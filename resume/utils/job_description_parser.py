@@ -7,7 +7,7 @@ def parse_job_description(job_description_text, headings):
     """
     Parse a job description text and categorize it into predefined headings.
     
-    :param job_description_text: The raw job description text.
+:param job_description_text: The raw job description text.
     :param headings: List of headings to categorize the job description content.
     :return: A dictionary with categorized job description content.
     """
