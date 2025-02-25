@@ -354,6 +354,18 @@ def generate_portfolio():
 
     return render_template('upload_portfolio.html')
 
+# Route to display job listings
+@app.route('/job_listings')
+def job_listings():
+    try:
+        with open(r'resume\job_opening\job_listings.json', 'r') as file:
+            jobs = json.load(file)
+    except Exception as e:
+        print(f"Error loading job listings: {e}")
+        jobs = []
+
+    return render_template('job_listings.html', jobs=jobs)
+
 # Call the database initialization function
 if __name__ == '__main__':
     init_db()  # Initialize the database

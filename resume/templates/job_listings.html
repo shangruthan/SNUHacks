@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Job Listings</h1>
+    </header>
+    <main>
+        <h2>Available Job Opportunities</h2>
+        <ul class="job-listings">
+            {% for job in jobs %}
+                <li class="job-listing">
+                    <form action="{{ job.link }}" method="get" target="_blank">
+                        <div class="job-title">
+                            <strong>{{ job.title }}</strong>
+                        </div>
+                        <div class="job-company">
+                            <span>at {{ job.company }}</span>
+                        </div>
+                        <div class="job-link">
+                            <button type="submit" class="view-job-button">View Job</button>
+                        </div>
+                    </form>
+                </li>
+            {% else %}
+                <li>No job roles available.</li>
+            {% endfor %}
+        </ul>
+        <a href="/">Go to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html> 
