@@ -1,0 +1,134 @@
+{
+  "industryName": "Education",
+  "lastName": "R",
+  "locationName": "India",
+  "student": false,
+  "geoCountryName": "India",
+  "geoCountryUrn": "urn:li:fs_geo:102713980",
+  "geoLocationBackfilled": false,
+  "elt": true,
+  "industryUrn": "urn:li:fs_industry:1999",
+  "firstName": "Nareshkumar",
+  "entityUrn": "urn:li:fs_profile:ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE",
+  "geoLocation": {
+    "geoUrn": "urn:li:fs_geo:102439246"
+  },
+  "geoLocationName": "Chennai, Tamil Nadu",
+  "location": {
+    "basicLocation": {
+      "countryCode": "in"
+    }
+  },
+  "headline": "KVPY research scholar (AIR 1035) | Cybersecurity Enthusiast",
+  "displayPictureUrl": "https://media.licdn.com/dms/image/v2/D5603AQGmgJgsfZ9_Kw/profile-displayphoto-shrink_",
+  "img_200_200": "200_200/B56ZRGpYmzHoAY-/0/1736352046481?e=1746057600&v=beta&t=EU86eRy1fysJjxyWUjtww6OkjI9E4WgY0PdvsdKxf2k",
+  "img_400_400": "400_400/B56ZRGpYmzHoAg-/0/1736352046481?e=1746057600&v=beta&t=5-afPvL7quL24ScRxoFmmyxd04IDRdDmYxJLG-dy0hE",
+  "img_100_100": "100_100/B56ZRGpYmzHoAU-/0/1736352046481?e=1746057600&v=beta&t=gYFpS4ORZBZhuNCrZxBQLzgASCkffGjhNeWOBbX6b34",
+  "img_800_800": "800_800/B56ZRGpYmzHoAc-/0/1736352046484?e=1746057600&v=beta&t=YvPeNJ9nCTU_ZzDE3IgXmXpOXSB-RtbaDWSMUoQx81o",
+  "profile_id": "ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE",
+  "profile_urn": "urn:li:fs_miniProfile:ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE",
+  "member_urn": "urn:li:member:1058626097",
+  "public_id": "narer",
+  "experience": [
+    {
+      "locationName": "Coimbatore, Tamil Nadu, India",
+      "entityUrn": "urn:li:fs_position:(ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE,2470286961)",
+      "geoLocationName": "Coimbatore, Tamil Nadu, India",
+      "geoUrn": "urn:li:fs_geo:101031506",
+      "companyName": "Rise Academy",
+      "timePeriod": {
+        "endDate": {
+          "month": 11,
+          "year": 2024
+        },
+        "startDate": {
+          "month": 8,
+          "year": 2024
+        }
+      },
+      "company": {
+        "employeeCountRange": {
+          "start": 2,
+          "end": 10
+        },
+        "industries": [
+          "Professional Training & Coaching"
+        ]
+      },
+      "title": "Software Intern",
+      "region": "urn:li:fs_region:(in,0)",
+      "companyUrn": "urn:li:fs_miniCompany:99247401",
+      "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D560BAQF1Uvda67yCMw/company-logo_"
+    }
+  ],
+  "education": [
+    {
+      "entityUrn": "urn:li:fs_education:(ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE,840476053)",
+      "school": {
+        "objectUrn": "urn:li:school:590002",
+        "entityUrn": "urn:li:fs_miniSchool:590002",
+        "active": true,
+        "schoolName": "Shiv Nadar University Chennai",
+        "trackingId": "8zavu1KWRky0qPFjO2uJyg==",
+        "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQHGfGRVIn-zuQ/company-logo_"
+      },
+      "timePeriod": {
+        "endDate": {
+          "month": 2,
+          "year": 2026
+        },
+        "startDate": {
+          "month": 1,
+          "year": 2022
+        }
+      },
+      "degreeName": "Bachelor of Technology - BTech",
+      "schoolName": "Shiv Nadar University Chennai",
+      "fieldOfStudy": "Cyber security ",
+      "schoolUrn": "urn:li:fs_miniSchool:590002"
+    },
+    {
+      "entityUrn": "urn:li:fs_education:(ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE,999629273)",
+      "school": {
+        "objectUrn": "urn:li:school:13501",
+        "entityUrn": "urn:li:fs_miniSchool:13501",
+        "active": true,
+        "schoolName": "Indian Institute of Technology, Madras",
+        "trackingId": "6c/z7R9pR7inkwkwQg+iZw==",
+        "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQGqbSuxjLqtWQ/company-logo_"
+      },
+      "timePeriod": {
+        "startDate": {
+          "month": 9,
+          "year": 2023
+        }
+      },
+      "schoolName": "Indian Institute of Technology, Madras",
+      "fieldOfStudy": "Data Science and Applications",
+      "schoolUrn": "urn:li:fs_miniSchool:13501"
+    },
+    {
+      "entityUrn": "urn:li:fs_education:(ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE,845619313)",
+      "grade": "Grade 12- 91%",
+      "timePeriod": {
+        "endDate": {
+          "month": 7,
+          "year": 2022
+        },
+        "startDate": {
+          "month": 4,
+          "year": 2020
+        }
+      },
+      "schoolName": "Sishya School"
+    }
+  ],
+  "languages": [],
+  "publications": [],
+  "certifications": [],
+  "volunteer": [],
+  "honors": [],
+  "projects": [],
+  "skills": [],
+  "urn_id": "ACoAAD8ZWjEBKJxMqFVMJiARaQJtHFEekPibVyE"
+}
