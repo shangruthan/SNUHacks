@@ -18,8 +18,15 @@
             <h3>Identified Job Role:</h3>
             <p>{{ job_role }}</p> <!-- This will display the job role identified by Groq -->
         </div>
-        <h3> Job Role Roadmap:</h3>
-        <img src="static/images/CyberSec.png">
+        
+        <h3>Job Role Roadmap:</h3>
+        <p>To help you further in your career development, you can explore the roadmap for your identified job role. Click the button below to view the roadmap:</p>
+        <a href="https://roadmap.sh/{{ job_role | lower | replace(' ', '-') }}" target="_blank">
+            <button style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+                View Roadmap
+            </button>
+        </a>
+        <br></br>
         <a href="/individual_dashboard">Go Back to Dashboard</a>
     </main>
     <footer>

@@ -83,7 +83,16 @@
             <div class="feature-card">
                 <h3>Generate Interview Questions</h3>
                 <p>Generate tailored interview questions for specific job roles.</p>
+                <p>Just input the role you are hiring for and get all important questions you can ask.</p>
                 <button onclick="location.href='/generate_interview_questions'">Generate Questions</button>
+            </div>
+            <div class="feature-card">
+                <h3>LinkedIn Profile Analysis</h3>
+                <p>Input a LinkedIn profile URL to analyze the professional behavior of the profile owner.</p>
+                <form action="/behaviour_analysis" method="POST">
+                    <input type="text" name="linkedin_url" placeholder="Enter LinkedIn Profile URL" required>
+                    <button type="submit">Analyze Profile</button>
+                </form>
             </div>
         </div>
     </div>

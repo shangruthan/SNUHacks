@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavior Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Behavior Analysis</h1>
+    </header>
+    <main>
+        <h2>Employment Gaps</h2>
+        {% if gaps %}
+            <ul>
+                {% for gap in gaps %}
+                    <li>Between {{ gap.previous_role }} and {{ gap.next_role }}: {{ gap.gap_months }} months</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No employment gaps found.</p>
+        {% endif %}
+
+        <h2>Career Progression</h2>
+        <p>{{ roles | join(' → ') }}</p>
+
+        <h2>Skill Development</h2>
+        <p>Total Skills: {{ skill_names | length }}</p>
+        <p>Skills: {{ skill_names | join(', ') }}</p>
+
+        <h2>Job Stability</h2>
+        <p>Average Tenure: {{ avg_tenure }} years per job</p>
+
+        <h2>Industry Trends</h2>
+        <p>Industries: {{ industries | join(', ') }}</p>
+
+        <h2>Education Relevance</h2>
+        <p>{{ education_relevance }}</p>
+
+        <h2>Summary Analysis</h2>
+        <p>{{ summary }}</p>
+
+        <br>
+        <a href="/company_dashboard">Go Back to Dashboard</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Resume Evaluator</p>
+    </footer>
+</body>
+</html>

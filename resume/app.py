@@ -12,9 +12,12 @@ import json  # New import for handling JSON
 from skills_gap_analyzer.main import analyze_missing_skills
 from skills_gap_analyzer.resume import resume_information
 from resume_evaluation.job_description import job_description
+from professional_behaviour.linkedin_data import linkedin_data
 from resume_enhancer.main import enhance_section
+from datetime import datetime
 import markdown  # Import the markdown library
 from groq_utils import GroqClient  # New import for Groq client
+import time
 
 # Import additional libraries from portfolio.py
 from PyPDF2 import PdfReader
@@ -644,6 +647,67 @@ def generate_negotiation():
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+# Function to parse date strings into datetime objects
+def parse_date(year, month=None):
+    return datetime(year=year, month=month if month else 1, day=1)
+
+@app.route('/behaviour_analysis', methods=['GET', 'POST'])
+def behavior_analysis():
+    if request.method == 'POST':
+        linkedin_url = request.form.get('linkedin_url')
+        # Placeholder: In a real scenario, process the LinkedIn URL as needed
+        print(f'Received LinkedIn URL: {linkedin_url}')
+        time.sleep(2)
+
+    experience = linkedin_data.get("experience", [])
+    education = linkedin_data.get("education", [])
+    skills = linkedin_data.get("skills", [])
+    summary = linkedin_data.get("summary", "")
+
+    gaps = []
+    for i in range(1, len(experience)):
+        prev_end_date = experience[i - 1]["timePeriod"].get("endDate")
+        curr_start_date = experience[i]["timePeriod"].get("startDate")
+        if prev_end_date and curr_start_date:
+            prev_end = parse_date(prev_end_date["year"], prev_end_date.get("month"))
+            curr_start = parse_date(curr_start_date["year"], curr_start_date.get("month"))
+            gap = (curr_start - prev_end).days / 30
+            if gap > 0:
+                gaps.append({
+                    "previous_role": experience[i - 1]["title"],
+                    "next_role": experience[i]["title"],
+                    "gap_months": round(gap, 1)
+                })
+
+    roles = [exp["title"] for exp in experience]
+    skill_names = [skill['name'] for skill in skills]
+    tenures = []
+    for exp in experience:
+        start_date = exp["timePeriod"].get("startDate")
+        end_date = exp["timePeriod"].get("endDate")
+        if start_date:
+            start = parse_date(start_date["year"], start_date.get("month"))
+            end = parse_date(end_date["year"], end_date.get("month")) if end_date else datetime.now()
+            tenures.append((end - start).days / 365)
+    avg_tenure = round(sum(tenures) / len(tenures), 2) if tenures else 0
+
+    industries = set()
+    for exp in experience:
+        if "industries" in exp.get("company", {}):
+            industries.update(exp["company"]["industries"])
+
+    education_relevance = "Relevant" if any("cyber" in edu.get("fieldOfStudy", "").lower() for edu in education) else "Not Relevant"
+
+    return render_template('behaviour_analysis.html',
+                           gaps=gaps,
+                           roles=roles,
+                           skill_names=skill_names,
+                           avg_tenure=avg_tenure,
+                           industries=list(industries),
+                           education_relevance=education_relevance,
+                           summary=summary)
+
 
 # Call the database initialization function
 if __name__ == '__main__':
