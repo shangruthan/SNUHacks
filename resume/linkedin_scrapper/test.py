@@ -4,8 +4,8 @@ from linkedin_api import Linkedin
 import os
 import sys
 
-TEST_LINKEDIN_USERNAME = ("shangrutha@gmail.com")
-TEST_LINKEDIN_PASSWORD = ("-Ye:yYwf93Aq49h")
+TEST_LINKEDIN_USERNAME = ("")
+TEST_LINKEDIN_PASSWORD = ("")
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     api = Linkedin(TEST_LINKEDIN_USERNAME, TEST_LINKEDIN_PASSWORD, refresh_cookies=True)
 
     # Example profile IDs to fetch
-    profile_ids = ["narer"]
+    profile_ids = ["vsundar17697"]
 
     for profile_id in profile_ids:
         try:

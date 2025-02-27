@@ -1,0 +1,750 @@
+{
+  "summary": "Experienced Software Developer adept in bringing forth expertise in design, implementation, testing and maintenance of complex systems combined with incredible energy and clear communication skills.",
+  "industryName": "Software Development",
+  "lastName": "VENKATARAMANI",
+  "locationName": "India",
+  "student": false,
+  "geoCountryName": "India",
+  "geoCountryUrn": "urn:li:fs_geo:102713980",
+  "geoLocationBackfilled": false,
+  "elt": false,
+  "industryUrn": "urn:li:fs_industry:4",
+  "firstName": "SUNDARARAMAN",
+  "entityUrn": "urn:li:fs_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+  "geoLocation": {
+    "geoUrn": "urn:li:fs_geo:106888327"
+  },
+  "geoLocationName": "Chennai, Tamil Nadu",
+  "location": {
+    "basicLocation": {
+      "countryCode": "in"
+    }
+  },
+  "headline": "Technical Lead @ MotoRQ",
+  "displayPictureUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_",
+  "img_100_100": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+  "img_200_200": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+  "img_400_400": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+  "img_800_800": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+  "profile_id": "ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+  "profile_urn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+  "member_urn": "urn:li:member:528898507",
+  "public_id": "vsundar17697",
+  "experience": [
+    {
+      "locationName": "Chennai, Tamil Nadu, India",
+      "entityUrn": "urn:li:fs_position:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,2272297958)",
+      "geoLocationName": "Chennai, Tamil Nadu, India",
+      "geoUrn": "urn:li:fs_geo:114467055",
+      "companyName": "Motorq",
+      "timePeriod": {
+        "startDate": {
+          "month": 7,
+          "year": 2023
+        }
+      },
+      "company": {
+        "employeeCountRange": {
+          "start": 51,
+          "end": 200
+        },
+        "industries": [
+          "Computer Software"
+        ]
+      },
+      "title": "Technical Lead",
+      "region": "urn:li:fs_region:(in,0)",
+      "companyUrn": "urn:li:fs_miniCompany:18161838",
+      "companyLogoUrl": "https://media.licdn.com/dms/image/v2/C560BAQFwuO4mCOS4-Q/company-logo_"
+    },
+    {
+      "locationName": "India",
+      "entityUrn": "urn:li:fs_position:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,1819001278)",
+      "geoLocationName": "India",
+      "geoUrn": "urn:li:fs_geo:102713980",
+      "companyName": "Sniff Pet & Play Services Private Limited",
+      "timePeriod": {
+        "startDate": {
+          "month": 6,
+          "year": 2021
+        }
+      },
+      "description": "Sniff aims to be an one stop solution for all your pets needs. By providing personalised pet services and product recommendation driven by the community, Sniff takes a unique angle at the pet industry through an App first & Community first approach.",
+      "title": "Co-Founder & CTO ",
+      "region": "urn:li:fs_region:(in,0)"
+    },
+    {
+      "entityUrn": "urn:li:fs_position:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,2011587486)",
+      "companyName": "Motorq",
+      "timePeriod": {
+        "endDate": {
+          "month": 7,
+          "year": 2023
+        },
+        "startDate": {
+          "month": 4,
+          "year": 2022
+        }
+      },
+      "company": {
+        "employeeCountRange": {
+          "start": 51,
+          "end": 200
+        },
+        "industries": [
+          "Computer Software"
+        ]
+      },
+      "title": "Software Engineer",
+      "companyUrn": "urn:li:fs_miniCompany:18161838",
+      "companyLogoUrl": "https://media.licdn.com/dms/image/v2/C560BAQFwuO4mCOS4-Q/company-logo_"
+    },
+    {
+      "locationName": "Bengaluru, Karnataka, India",
+      "entityUrn": "urn:li:fs_position:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,1918161913)",
+      "geoLocationName": "Bengaluru, Karnataka, India",
+      "geoUrn": "urn:li:fs_geo:105214831",
+      "companyName": "Goldman Sachs",
+      "timePeriod": {
+        "endDate": {
+          "month": 3,
+          "year": 2022
+        },
+        "startDate": {
+          "month": 1,
+          "year": 2022
+        }
+      },
+      "company": {
+        "employeeCountRange": {
+          "start": 10001
+        },
+        "industries": [
+          "Financial Services"
+        ]
+      },
+      "title": "Associate",
+      "region": "urn:li:fs_region:(in,0)",
+      "companyUrn": "urn:li:fs_miniCompany:1382",
+      "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQG9L7InIQVZrQ/company-logo_"
+    },
+    {
+      "locationName": "Bengaluru Area, India",
+      "entityUrn": "urn:li:fs_position:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,1563613536)",
+      "geoLocationName": "Bengaluru Area, India",
+      "geoUrn": "urn:li:fs_geo:90009633",
+      "companyName": "Goldman Sachs",
+      "timePeriod": {
+        "endDate": {
+          "month": 12,
+          "year": 2021
+        },
+        "startDate": {
+          "month": 5,
+          "year": 2019
+        }
+      },
+      "description": "Was an integral part of a team that re-built a critical, time sensitive, firm-wide operational risk management application, from scratch, that allowed risk managers to track risks and controls. Key highlight of the project was understanding the user workflows for various different users and coming up with the optimal way to facilitate the same.",
+      "company": {
+        "employeeCountRange": {
+          "start": 10001
+        },
+        "industries": [
+          "Financial Services"
+        ]
+      },
+      "title": "Analyst",
+      "region": "urn:li:fs_region:(in,7127)",
+      "companyUrn": "urn:li:fs_miniCompany:1382",
+      "companyLogoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQG9L7InIQVZrQ/company-logo_"
+    }
+  ],
+  "education": [
+    {
+      "courses": [
+        "urn:li:fs_course:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,1)",
+        "urn:li:fs_course:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,2)",
+        "urn:li:fs_course:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,3)",
+        "urn:li:fs_course:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,4)",
+        "urn:li:fs_course:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,5)"
+      ],
+      "projects": [
+        "urn:li:fs_project:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436260784)",
+        "urn:li:fs_project:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436518398)",
+        "urn:li:fs_project:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436712041)",
+        "urn:li:fs_project:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436824564)"
+      ],
+      "description": "Spent most of my college learning things the easy way. (Which imo  is practically doing stuff with the laptop rather than sitting in a room with my text book). Won a few hackathons, participated in many, tried a lot of different areas in computer science. Needless to say, anything new has already gotten my interest. ",
+      "degreeName": "Bachelor of Engineering (B.E.)",
+      "honors": [
+        "urn:li:fs_honor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,841164062)"
+      ],
+      "schoolUrn": "urn:li:fs_miniSchool:234077",
+      "entityUrn": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "school": {
+        "objectUrn": "urn:li:school:234077",
+        "entityUrn": "urn:li:fs_miniSchool:234077",
+        "active": true,
+        "schoolName": "SSN College of Engineering",
+        "trackingId": "ZnpEdG2uS6G8ifDcwuFblQ==",
+        "logoUrl": "https://media.licdn.com/dms/image/v2/C510BAQHjX1EVumFLhA/company-logo_"
+      },
+      "activities": "Lights Out Please (Drama Club), Music Club, SSN Competetive Coding Club",
+      "grade": "7.8",
+      "timePeriod": {
+        "endDate": {
+          "year": 2019
+        },
+        "startDate": {
+          "year": 2015
+        }
+      },
+      "fieldOfStudyUrn": "urn:li:fs_fieldOfStudy:100189",
+      "schoolName": "SSN College of Engineering",
+      "fieldOfStudy": "Computer Science",
+      "degreeUrn": "urn:li:fs_degree:269"
+    },
+    {
+      "projects": [
+        "urn:li:fs_project:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,213703257)"
+      ],
+      "entityUrn": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,365213868)",
+      "activities": "Music Club",
+      "grade": "Class X - CGPA 10/10 (2013) ; Class XII - 483/500 (2015)",
+      "timePeriod": {
+        "endDate": {
+          "year": 2015
+        },
+        "startDate": {
+          "year": 2009
+        }
+      },
+      "description": "Topped the school in computer science with a score of 99/100.\n\nWon an award for The Best Computer Science Project.\n\nRepresented school at the National Level Science Exhibition held in Delhi for a model on Energy Generation.",
+      "degreeName": "High School",
+      "schoolName": "DAV Boys Senior Secondary School, Gopalapuram",
+      "fieldOfStudy": "Science with Computer Science elective",
+      "honors": [
+        "urn:li:fs_honor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,212959221)",
+        "urn:li:fs_honor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,213016981)"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "English"
+    },
+    {
+      "name": "Tamil"
+    }
+  ],
+  "publications": [],
+  "certifications": [],
+  "volunteer": [
+    {
+      "role": "Teach A School",
+      "companyName": "Government Higher Secondart School",
+      "timePeriod": {
+        "endDate": {
+          "month": 9,
+          "year": 2016
+        },
+        "startDate": {
+          "month": 8,
+          "year": 2016
+        }
+      },
+      "description": "Teaching 6th grade students mathematics and basic English language skills. ",
+      "company": {
+        "miniCompany": {
+          "objectUrn": "urn:li:company:0",
+          "entityUrn": "urn:li:fs_miniCompany:0",
+          "name": "United Latino Students Association",
+          "showcase": false,
+          "active": false,
+          "logo": {
+            "com.linkedin.common.VectorImage": {
+              "artifacts": [
+                {
+                  "width": 200,
+                  "fileIdentifyingUrlPathSegment": "200_200/company-logo_200_200/0/1630622575809?e=1748476800&v=beta&t=ptsVaI_rmQBkT__zHjtJ_GIew9saFZSwYu619dbZzUA",
+                  "expiresAt": 1748476800000,
+                  "height": 200
+                },
+                {
+                  "width": 100,
+                  "fileIdentifyingUrlPathSegment": "100_100/company-logo_100_100/0/1630622575809?e=1748476800&v=beta&t=OYgrIYf9PIB3Cw15qW1Miqgb8e3bBE9E6V_AlK2f49U",
+                  "expiresAt": 1748476800000,
+                  "height": 100
+                },
+                {
+                  "width": 400,
+                  "fileIdentifyingUrlPathSegment": "400_400/company-logo_400_400/0/1630622575809?e=1748476800&v=beta&t=XKTyURdkniEmDiSgeybi7pQy38QIG-7nNBH2PvIPi_8",
+                  "expiresAt": 1748476800000,
+                  "height": 400
+                }
+              ],
+              "rootUrl": "https://media.licdn.com/dms/image/v2/C560BAQHGhly_87bnSw/company-logo_"
+            }
+          },
+          "universalName": "united-latino-students-association",
+          "dashCompanyUrn": "urn:li:fsd_company:0",
+          "trackingId": "/zPJumknTAO+BVDnOVdlXA=="
+        }
+      },
+      "companyUrn": "urn:li:fs_miniCompany:0"
+    }
+  ],
+  "honors": [
+    {
+      "description": "Placed third out of the 15 colleges that participated in the theater event for our adaptation of the play \"Lamb to the Slaughter\".",
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "title": "Third Place in Theater Event",
+      "issueDate": {
+        "month": 9,
+        "year": 2016
+      },
+      "issuer": "Madras Christian College"
+    },
+    {
+      "description": "For project Natural Language Assistant.",
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,365213868)",
+      "title": "Best Class XII Computer Science Project",
+      "issueDate": {
+        "month": 6,
+        "year": 2015
+      },
+      "issuer": "DAV"
+    },
+    {
+      "description": "Secured 99/100 in class XII board exam held by CBSE.",
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,365213868)",
+      "title": "School Topper, Computer Science",
+      "issueDate": {
+        "month": 6,
+        "year": 2015
+      },
+      "issuer": "DAV"
+    }
+  ],
+  "projects": [
+    {
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,365213868)",
+      "members": [
+        {
+          "member": {
+            "firstName": "SUNDARARAMAN",
+            "lastName": "VENKATARAMANI",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "occupation": "Technical Lead @ MotoRQ",
+            "objectUrn": "urn:li:member:528898507",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "publicIdentifier": "vsundar17697",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "W9L4H6TmQRanePNP6vjr8g=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,213703257,1)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+        }
+      ],
+      "timePeriod": {
+        "endDate": {
+          "month": 6,
+          "year": 2015
+        },
+        "startDate": {
+          "month": 6,
+          "year": 2015
+        }
+      },
+      "description": "The project has a natural language interaction with the user to carry out various mathematical tasks, ticket booking for movies and travel and also sending and receiving emails within users of the program. The program also had a very basic conversation element along side with multiplayer games; all of which is asked of the program using natural language.",
+      "title": "Natural Language Assistant"
+    },
+    {
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "members": [
+        {
+          "member": {
+            "firstName": "SUNDARARAMAN",
+            "lastName": "VENKATARAMANI",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "occupation": "Technical Lead @ MotoRQ",
+            "objectUrn": "urn:li:member:528898507",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "publicIdentifier": "vsundar17697",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "W9L4H6TmQRanePNP6vjr8g=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436712041,251235820)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+        },
+        {
+          "member": {
+            "firstName": "Venkatesh",
+            "lastName": "Shanmuga Sundaram",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw",
+            "occupation": "Database Internals | Distributed Systems",
+            "objectUrn": "urn:li:member:109076825",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw",
+            "publicIdentifier": "blazeey",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1675736035129?e=1746057600&v=beta&t=ME09IzILsGXCVZQqXyrcYYo70rgTzbbOmx6YFVwKgLU",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1675736035129?e=1746057600&v=beta&t=dDYibGmbj6sJInY73DDwGQvsLAQUDAt3Dye5Ltt9gmQ",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1675736035129?e=1746057600&v=beta&t=UIPCbIhjgb4gvyiabwO7HYe5qYO50vw18cN4SgFo7-4",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1675736035129?e=1746057600&v=beta&t=OchoSm-jXPuccprPiNVXlBS4zvVcbg2PjKCcUT78n5w",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/D4E03AQGtKYtmp5YVgA/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "mPlB0t+lQFCFZdAziU6uuw=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436712041,251236372)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw"
+        }
+      ],
+      "timePeriod": {
+        "endDate": {
+          "month": 10,
+          "year": 2018
+        },
+        "startDate": {
+          "month": 9,
+          "year": 2017
+        }
+      },
+      "description": "LitUp is a real-time online multiplayer game developed based on the card game \u201cLiterature\u201d. The game was completely developed by a team of 2, where the complete business logic and persistence of data was implemented by me.\n",
+      "title": "LITUP",
+      "url": "https://github.com/Blazeey/LitUp"
+    },
+    {
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "members": [
+        {
+          "member": {
+            "firstName": "SUNDARARAMAN",
+            "lastName": "VENKATARAMANI",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "occupation": "Technical Lead @ MotoRQ",
+            "objectUrn": "urn:li:member:528898507",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "publicIdentifier": "vsundar17697",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "W9L4H6TmQRanePNP6vjr8g=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436260784,251238029)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+        }
+      ],
+      "timePeriod": {
+        "endDate": {
+          "month": 9,
+          "year": 2018
+        },
+        "startDate": {
+          "month": 9,
+          "year": 2018
+        }
+      },
+      "description": "BlanQ is an android application using our custom algorithm that generates multiple choice questions from any given text. The most key feature of our application was that the options presented to the users would be relevant to the question, which was hard feat to achieve in a one day hackathon. ",
+      "title": "BlanQ",
+      "url": "https://github.com/py-ranoid/BlanQ"
+    },
+    {
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "members": [
+        {
+          "member": {
+            "firstName": "SUNDARARAMAN",
+            "lastName": "VENKATARAMANI",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "occupation": "Technical Lead @ MotoRQ",
+            "objectUrn": "urn:li:member:528898507",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "publicIdentifier": "vsundar17697",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "W9L4H6TmQRanePNP6vjr8g=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436518398,251235808)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+        }
+      ],
+      "timePeriod": {
+        "endDate": {
+          "month": 7,
+          "year": 2018
+        },
+        "startDate": {
+          "month": 6,
+          "year": 2018
+        }
+      },
+      "description": "Meetception is an android application designed to help professionals meet other professionals or students in and around them anonymously. The driving force behind the idea was to help people meet in person rather than texting over phone. The application features a fluid user interface and offers a fluid experience to the user. The application was developed by a team of 4, where I contributed towards the business logic and server side hosting.",
+      "title": "MEETCEPTION",
+      "url": "https://github.com/py-ranoid/Meetception-Server"
+    },
+    {
+      "occupation": "urn:li:fs_education:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,391002799)",
+      "members": [
+        {
+          "member": {
+            "firstName": "SUNDARARAMAN",
+            "lastName": "VENKATARAMANI",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "occupation": "Technical Lead @ MotoRQ",
+            "objectUrn": "urn:li:member:528898507",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA",
+            "publicIdentifier": "vsundar17697",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1578835763134?e=1746057600&v=beta&t=m09huFGrvCIXUhhnMgn2cHKvgW212lgLZ0Li-vI-pZs",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1578835763096?e=1746057600&v=beta&t=o7mdWVF6gx_fSl51PpHFRcsTNWg9jtOS21ANkmud33c",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1578835763181?e=1746057600&v=beta&t=RCpiBZDz32qPrb10OGcLjd1mkg6z_qeKwUnPW-oJi68",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1578835763247?e=1746057600&v=beta&t=h7hHOdEtsjv-I3ZOEuDNYG-hUrUH4MEnTIRskcp505c",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/C5103AQE_cGObYH2Vrg/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "W9L4H6TmQRanePNP6vjr8g=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436824564,251235837)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+        },
+        {
+          "member": {
+            "firstName": "Venkatesh",
+            "lastName": "Shanmuga Sundaram",
+            "dashEntityUrn": "urn:li:fsd_profile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw",
+            "occupation": "Database Internals | Distributed Systems",
+            "objectUrn": "urn:li:member:109076825",
+            "entityUrn": "urn:li:fs_miniProfile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw",
+            "publicIdentifier": "blazeey",
+            "picture": {
+              "com.linkedin.common.VectorImage": {
+                "artifacts": [
+                  {
+                    "width": 100,
+                    "fileIdentifyingUrlPathSegment": "100_100/profile-displayphoto-shrink_100_100/0/1675736035129?e=1746057600&v=beta&t=ME09IzILsGXCVZQqXyrcYYo70rgTzbbOmx6YFVwKgLU",
+                    "expiresAt": 1746057600000,
+                    "height": 100
+                  },
+                  {
+                    "width": 200,
+                    "fileIdentifyingUrlPathSegment": "200_200/profile-displayphoto-shrink_200_200/0/1675736035129?e=1746057600&v=beta&t=dDYibGmbj6sJInY73DDwGQvsLAQUDAt3Dye5Ltt9gmQ",
+                    "expiresAt": 1746057600000,
+                    "height": 200
+                  },
+                  {
+                    "width": 400,
+                    "fileIdentifyingUrlPathSegment": "400_400/profile-displayphoto-shrink_400_400/0/1675736035129?e=1746057600&v=beta&t=UIPCbIhjgb4gvyiabwO7HYe5qYO50vw18cN4SgFo7-4",
+                    "expiresAt": 1746057600000,
+                    "height": 400
+                  },
+                  {
+                    "width": 800,
+                    "fileIdentifyingUrlPathSegment": "800_800/profile-displayphoto-shrink_800_800/0/1675736035129?e=1746057600&v=beta&t=OchoSm-jXPuccprPiNVXlBS4zvVcbg2PjKCcUT78n5w",
+                    "expiresAt": 1746057600000,
+                    "height": 800
+                  }
+                ],
+                "rootUrl": "https://media.licdn.com/dms/image/v2/D4E03AQGtKYtmp5YVgA/profile-displayphoto-shrink_"
+              }
+            },
+            "trackingId": "mPlB0t+lQFCFZdAziU6uuw=="
+          },
+          "entityUrn": "urn:li:fs_contributor:(ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA,436824564,251236385)",
+          "profileUrn": "urn:li:fs_miniProfile:ACoAAAaAYVkBURhfMrXSYctVaUvUFVs7A5jcCFw"
+        }
+      ],
+      "timePeriod": {
+        "endDate": {
+          "month": 3,
+          "year": 2018
+        },
+        "startDate": {
+          "month": 1,
+          "year": 2018
+        }
+      },
+      "description": "Public Sentiment was an application developed for Smart India Hackathon 2018, in order to analyse publics sentiment on a given program for the broadcast ministry. The application had a interactive dashboard that presented graphical information to the government officials in an intuitive manner so that they could meet the needs of the public better, and also correct themselves if need be. The application was developed by a team of 6, where the complete data mining, preprocessing, transformation, model creation and server hosting was implemented by me.",
+      "title": "PUBLIC SENTIMENT (ANDROID/WEB APPLICATION)",
+      "url": "https://github.com/vsundar17697/SIH"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Technical Project Leadership"
+    },
+    {
+      "name": "Stream Processing"
+    },
+    {
+      "name": "Microsoft Azure"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "urn_id": "ACoAAB-GWcsB554bqkG0wFkHEg_X4QSqlgNRdjA"
+}

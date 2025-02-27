@@ -3,7 +3,7 @@ from find_role import main  # Import the main function from find_role.py
 import time
 
 # Initialize the API client
-api = Linkedin('shangrutha@gmail.com', '')  # Replace with your credentials
+api = Linkedin('', '')  # Replace with your credentials
 
 # # Get job role and company from find_role.py
 # job_info = main()  # Call the main function to extract job info

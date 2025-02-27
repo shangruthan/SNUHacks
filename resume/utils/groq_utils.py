@@ -7,7 +7,7 @@ class GroqClient:
         """
         Initialize the Groq client.
         """
-        self.client = Groq(api_key="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")
+        self.client = Groq(api_key="")
         print("Groq client initialized.")
 
     def send_prompt(self, system_message, user_prompt, model="qwen-2.5-coder-32b", temperature=0.7, max_tokens=1024):
